@@ -1,0 +1,131 @@
+/*Util...*/
+.show {
+    display: flex;
+}
+
+.no-show {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.active-select {
+    background-color: hsl(25, 97%, 53%) !important;
+    color: hsl(0, 0%, 100%) !important;
+}
+/*********/
+
+body {
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Overpass', sans-serif;
+    padding: 0 15px;
+}
+
+.container {
+    height: 100vh;
+}
+
+.card {
+    width: 90%;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 25px;
+    background-color:  hsl(213, 19%, 18%);
+}
+
+.card-header #svg-thank-you {
+    margin: 0 auto;
+}
+
+.card-options {
+    margin-bottom: 30px;
+}
+
+.text {
+    color:  hsl(217, 12%, 63%);
+    font-size: 15px;
+
+}
+
+.btn-submit {
+    color:  hsl(0, 0%, 100%);
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    border-radius: 25px;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    padding: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+
+.btn-submit:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cyrcle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: hsl(217, 12%, 26%);
+    color:  hsl(217, 12%, 63%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+.cyrcle:hover {
+    background-color:  hsl(216, 12%, 54%);
+    color: hsl(0, 0%, 100%);
+}
+
+.result {
+    color:hsl(25, 97%, 53%);
+    background-color: hsl(217, 12%, 26%);
+    width: fit-content;
+    margin: 25px auto;
+    padding: 10px 25px;
+    border-radius: 25px;
+}
+
+.attribution {
+    margin: 15px auto;
+}
+
+.attribution a{
+    color:hsl(25, 97%, 53%);
+}
+
+@media (min-width: 375px) {
+    .card {
+         width:375px;
+    }
+ 
+    .cyrcle {
+     width: 50px;
+     height: 50px;
+    }
+ }
