@@ -24,10 +24,23 @@ p {
 }
 
 .product-wrapper {
-    width: 50%
+    width: 50%;
+    border-radius: 25px;
+    display: flex;
 }
 
 .product-left,
 .product-right {
     width: 50%;
+}
+
+.product-left img{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.product-title,
+.product-price-wrap {
+    font-family: 'Fraunces', sans-serif;
 }
