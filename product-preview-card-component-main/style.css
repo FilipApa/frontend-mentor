@@ -26,7 +26,7 @@ p {
 
 .product-wrapper {
     width: 80%;
-    height: 500px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,11 +79,9 @@ p {
 
 @media screen and (min-width: 375px) {
     .product-wrapper {
-        flex-direction: row;    }
-
-    .product-left {
-        background-image: url('./images/image-product-desktop.jpg');
-
+        flex-direction: row;    
+        width: 50%;
+        height: 400px;
     }
 
     .product-left,
@@ -91,4 +89,19 @@ p {
         width: 50%;
         height: 100%;
     }
+
+    .product-left {
+        background-image: url('./images/image-product-desktop.jpg');
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        
+    }
+
+    .product-right {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+   
 }
