@@ -1,5 +1,6 @@
 :root {
     --darkCyan:  hsl(158, 36%, 37%);
+    --darkCyanHover: hsl(158, 48%, 24%);
     --cream: hsl(30, 38%, 92%);
     --veryDarkBlue: hsl(212, 21%, 14%);
     --darkGrayishBlue: hsl(228, 12%, 48%);
@@ -14,6 +15,8 @@ body {
 p {
     font-size: 14px;
     color: var(--darkGrayishBlue);
+    line-height: 1.4;
+    margin-bottom: 45px;
 }
 
 .container {
@@ -45,14 +48,17 @@ p {
     background-size: cover;
     background-position: center;
     height: 35%;
-    padding: 25px;
+    padding: 15px 25px;
 }
 
 .product-right {
-    padding: 25px;
+    padding: 15px 25px;
     background-color: var(--white);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .product-title,
@@ -64,13 +70,14 @@ p {
     text-transform: uppercase;
     color: var(--darkGrayishBlue);
     letter-spacing: 3px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .product-title {
     color: var(--veryDarkBlue);
     font-size: 27px;
     margin: 10px 0;
+    line-height: 1;
 }
 
 .product-price-wrap {
@@ -93,6 +100,7 @@ p {
 
 .btn  {
     font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
 }
 
 .product-btn {
@@ -105,7 +113,13 @@ p {
     color: var(--white);
     width: 100%;
     margin: 10px 0;
-    padding: 15px 0;
+    padding: 10px 0;
+    background-color: var(--darkCyan);
+    transition: all 0.2s;
+}
+
+.product-btn:hover {
+    background-color: var(--darkCyanHover);
 }
 
 .product-btn svg{
@@ -113,6 +127,10 @@ p {
 }
 
 @media screen and (min-width: 750px) {
+    p {
+        margin-bottom: 15px;
+    }
+
     .product-wrapper {
         flex-direction: row;    
         width: 50%;
@@ -128,8 +146,7 @@ p {
     .product-left {
         background-image: url('./images/image-product-desktop.jpg');
         border-top-right-radius: 0px;
-        border-bottom-left-radius: 10px;
-        
+        border-bottom-left-radius: 10px;    
     }
 
     .product-right {
