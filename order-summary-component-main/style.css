@@ -84,8 +84,13 @@ p {
     font-weight: 900;
 }
 
-.card-plan-anual a{
+.card-plan a{
     color: var(--brightBlue);
+    transition: all 0.2s;
+}
+
+.card-plan a:hover{
+    opacity: 0.8;
 }
 
 .card-footer {
@@ -102,11 +107,31 @@ p {
     background-color: var(--brightBlue);
     color: #fff;
     font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 700;
+}
+
+.btn.shade {
+    -webkit-box-shadow: 0px 25px 39px -19px var(--brightBlue);
+    -moz-box-shadow: 0px 25px 39px -19px var(--brightBlue);
+    box-shadow: 0px 25px 39px -19px var(--brightBlue);
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 .btn.transparent {
     background-color: transparent;
     color: var(--desaturatedBlue);
+    transition: all 0.2s;
+
+}
+
+.btn.transparent:hover {
+    color: var(--darkBlue);
 }
 @media screen and (min-width:375px) {
     body {
