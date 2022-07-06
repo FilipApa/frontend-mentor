@@ -28,7 +28,7 @@ register_taxonomy('serie', 'post', array(
     'pad_counts' => 0,
     'hierarchical' => 1,
     'echo' => 0,
-    'title_li' => 'Locations'
+    'title_li' => 'Years'
   ) );
 
   $series_list = wp_list_categories( array(
@@ -42,8 +42,24 @@ register_taxonomy('serie', 'post', array(
   ) );
   
   if ( $years_list )
-  echo '<ul class="locations-list">' . $years_list . '</ul>';
+  echo '<ul class="years-list">' . $years_list . '</ul>';
 
   if (  $series_list )
-  echo '<ul class="locations-list">' .  $series_list . '</ul>';
+  echo '<ul class="years-list">' .  $series_list . '</ul>';
+
   ?>
+  <?php
+    // Get a list of all terms in a taxonomy
+    $terms = get_terms( "location", array(
+      'hide_empty' => 0,
+    ) );
+    $years = array();
+    if ( count($terms) > 0 ):
+      foreach ( $terms as $term )
+        $years[] = $term->name;
+
+      $years_str = implode(', ', $years);
+    ?>
+    <h2>Nationwide Coverage</h2>
+    <p>We cover stories around the country in places like <?php echo $years_str; ?> and more. If we're not the best source for the latest news in your area, let us know!</p>
+    <?php endif; ?>

@@ -34,6 +34,7 @@ body {
 
 img {
     width: 100%;
+    height: auto;
 }
 
 .text-section {
@@ -82,4 +83,38 @@ img {
     text-transform: uppercase;
     color: var(--slightlyTransparentWhiteParagraph);
     font-size: 11px;
+}
+
+
+@media screen and (min-width:700px) {
+    img {
+        height: 100%;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: row-reverse;
+    }  
+
+    .img-section,
+    .text-section {
+        width: 50%;
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:10px  40px;
+    }
+
+    .text-section h2,
+    .text-section p {
+    text-align: left;
+}
+
+    .text-section .reference-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
