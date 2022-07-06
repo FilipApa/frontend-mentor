@@ -56,6 +56,7 @@ img {
 .text-section p {
     color: var(--slightlyTransparentWhiteParagraph);
     font-size: 15px;
+    margin-bottom: 30px;
 }
 
 .text-section .reference-section,
@@ -73,4 +74,12 @@ img {
 .reference-section .reference-number {
     color: var(--white);
     font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.reference-section .reference-desc {
+    text-transform: uppercase;
+    color: var(--slightlyTransparentWhiteParagraph);
+    font-size: 11px;
 }
