@@ -1,0 +1,49 @@
+:root {
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    --darkGrayishMagenta: hsl(303, 10%, 53%);
+    --lightGrayishMagenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+.section-top,
+.section-rating,
+.section-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-top {
+    text-align: center;
+}
+
+.section-top h1 {
+    color: var(--veryDarkMagenta);
+    font-weight: 700;
+    font-size: 32px;
+    padding: 0 24px;
+}
+
+.section-top p {
+    color: var(--darkGrayishMagenta);
+}
+
+.rating {
+    background-color: var(--lightGrayishMagenta);
+
+}
+
+.rating p{
+    color: var(--veryDarkMagenta);
+    font-weight: 700;
+}
+
+.card {
+    background-color: var(--veryDarkMagenta);
+}
