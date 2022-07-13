@@ -9,7 +9,7 @@
 
 body {
     font-family: 'League Spartan', sans-serif;
-    padding: 50px 20px;
+    padding: 50px 15px;
 }
 
 p {
@@ -31,7 +31,7 @@ p {
 .section-top h1 {
     color: var(--veryDarkMagenta);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 34px;
     padding: 0 24px;
 }
 
