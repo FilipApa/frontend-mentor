@@ -64,6 +64,8 @@ p {
 .rating-stars {
     display: flex;
     margin-bottom: 14px;
+    margin-right: 0;
+
 }
 
 .rating-stars svg {
@@ -111,4 +113,78 @@ p {
     height: 40px;
     border-radius: 50%;
     margin-right: 25px;
+}
+
+
+.mobile-pattern-top,
+.mobile-pattern-bottom{
+    display: block;
+}
+
+.desktop-pattern-top,
+.desktop-pattern-bottom{
+    display: hidden;
+}
+
+@media screen and (min-width:1080px) {
+    body {
+        padding: 50px 5%;
+    }
+    .section-top{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .section-rating .rating {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section-rating,
+    .section-text {
+        width: 50%;
+    }
+
+    .section-rating .rating-stars {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+    .section-rating .rating {
+        width: 75%;
+    }
+
+    .section-rating .rating:nth-child(2) {
+        align-self: center;
+    }
+
+    .section-rating .rating:nth-child(3) {
+        align-self: flex-end;
+    }
+
+    .section-top {
+        text-align: left;
+    }
+
+    .section-text h1 {
+        font-size: 45px;
+        padding-left: 0;
+        max-width: 400px;
+    }
+
+    .section-text p {
+        max-width: 450px;
+    }
+
+    .mobile-pattern-top,
+    .mobile-pattern-bottom{
+    display: hidden;
+    }
+
+    .desktop-pattern-top,
+    .desktop-pattern-bottom{
+        display: block;
+    }
+
+
 }
