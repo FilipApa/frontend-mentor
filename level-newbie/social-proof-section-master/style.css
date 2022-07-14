@@ -9,7 +9,11 @@
 
 body {
     font-family: 'League Spartan', sans-serif;
-    padding: 50px 15px;
+}
+
+.container  {
+    max-width: 1200px;
+    margin: 50px auto;
 }
 
 p {
@@ -130,9 +134,11 @@ p {
     body {
         padding: 50px 5%;
     }
-    .section-top{
+    .section-top,
+    .section-bottom{
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 50px;
     }
 
     .section-rating .rating {
@@ -174,6 +180,23 @@ p {
 
     .section-text p {
         max-width: 450px;
+    }
+
+    .section-bottom {
+        height: 233px;
+    }
+
+    .section-bottom .card {
+        width: 26%;
+        height: fit-content;
+    }
+
+    .section-bottom .card:nth-child(2) {
+        align-self: center;
+    }
+
+    .section-bottom .card:nth-child(3) {
+        align-self: flex-end;
     }
 
     .mobile-pattern-top,
