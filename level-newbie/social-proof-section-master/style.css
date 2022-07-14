@@ -9,6 +9,7 @@
 
 body {
     font-family: 'League Spartan', sans-serif;
+    padding: 0 20px;
 }
 
 .container  {
@@ -183,7 +184,7 @@ p {
     }
 
     .section-bottom {
-        height: 233px;
+        height: 260px;
     }
 
     .section-bottom .card {
@@ -197,6 +198,10 @@ p {
 
     .section-bottom .card:nth-child(3) {
         align-self: flex-end;
+    }
+
+    .section-bottom .card-top {
+        margin-bottom: 25px;
     }
 
     .mobile-pattern-top,
