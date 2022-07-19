@@ -1,0 +1,25 @@
+:root {
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+.card-top {
+    background-image: url('./images/drawers.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.card-body h2 {
+    color: var(--veryDarkGrayishBlue);
+}
+
+.card-body p {
+    color: var(--grayishBlue);
+}
