@@ -109,7 +109,6 @@ h1,h2,h3,h4 {
 }
 
 .card-share {
-    display: flex;
     align-items: center;
     position: absolute;
     height: 80px;
@@ -118,6 +117,7 @@ h1,h2,h3,h4 {
     bottom: 0;
     background-color: var(--veryDarkGrayishBlue);
     padding: 0 0 0 30px;
+    display: none;
 }
 
 .card-share span {
@@ -132,4 +132,12 @@ h1,h2,h3,h4 {
     color: #fff;
     font-size: 22px;
     margin: 0 5px;
+}
+
+.show {
+    display: flex;
+}
+
+.card-info .change-color {
+    color: #fff;
 }
