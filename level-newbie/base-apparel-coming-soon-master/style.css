@@ -1,3 +1,156 @@
+:root {
+    --desaturatedRed: hsl(0, 36%, 70%);
+    --softRed: hsl(0, 93%, 68%);
+}
+
 body,span,input {
     font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+header {
+    padding: 35px;
+}
+
+.desktop-logo {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+h1 span{
+    letter-spacing: 9.5px;
+    color: rgb(35, 31, 31);
+}
+
+h1 .colored-letter{
+    font-weight: 300;
+    color: var(--desaturatedRed);
+}
+
+.content p {
+    color: var(--desaturatedRed);
+    text-align: center;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+form {
+    width: 90%;
+    position: relative;
+}
+
+form .submit-btn,
+form .error {
+    position: absolute;
+}
+
+form .email-field {
+    border-radius: 25px;
+    border: 1px solid var(--desaturatedRed);
+    padding: 18px 0 18px 15px;
+    width: 97%;
+}
+
+form .error {
+    top:50%;
+    transform: translateY(-50%);
+    right: 50px;
+}
+
+form .submit-btn {
+    right:-25px;
+    top: 0;
+    height: 100%;
+    padding: 0 25px;
+    border-radius: 25px;  
+    background-color: var(--softRed);
+    border: 1px solid var(--softRed); 
+}
+
+.background-img {
+    background-image: url('./images/hero-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+}
+
+
+@media screen and (min-width:610px) {
+    header {
+        display: none;
+    }
+
+    main {
+        height: 100vh;
+        flex-direction: row;  
+    }
+
+    .desktop-logo {
+        display: block;
+        padding: 35px 15%;
+    }
+    
+    .background-img {
+        background-image: url('./images/hero-desktop.jpg');
+        height: 100%;
+        width: 45%;   
+    }
+
+    .content-wrap {
+        width: 55%;
+    }
+
+    .content {
+        max-width: 500px;
+        align-items: flex-start;
+        padding: 0 15%;
+    }
+
+    .content p {
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    h1 {
+        align-items: flex-start;
+        font-size: 55px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    form .submit-btn {
+        right:-5px;  
+        padding: 0 40px;
+    }
+
+    form .error {
+        right: 105px;
+    }
 }
