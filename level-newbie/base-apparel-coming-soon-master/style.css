@@ -81,6 +81,7 @@ form .error {
     top:50%;
     transform: translateY(-50%);
     right: 50px;
+    display: none;
 }
 
 form .submit-btn {
@@ -92,6 +93,14 @@ form .submit-btn {
     background-color: var(--softRed);
     border: 1px solid var(--softRed); 
 }
+
+.error-form-message {
+    padding: 10px 0 0 18px;
+    color: var(--softRed);
+    font-size: 13px;
+    display: none;
+}
+
 
 .background-img {
     background-image: url('./images/hero-mobile.jpg');
