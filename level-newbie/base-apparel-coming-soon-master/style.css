@@ -3,6 +3,7 @@
     --softRed: hsl(0, 93%, 68%);
 }
 
+
 body,span,input {
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
@@ -98,9 +99,7 @@ form .submit-btn {
     padding: 10px 0 0 18px;
     color: var(--softRed);
     font-size: 13px;
-    display: none;
 }
-
 
 .background-img {
     background-image: url('./images/hero-mobile.jpg');
@@ -110,6 +109,13 @@ form .submit-btn {
     width: 100%;
 }
 
+form .active {
+    display: block;
+}
+
+form .border-active {
+     border: 2px solid var(--softRed);
+}
 
 @media screen and (min-width:610px) {
     header {
