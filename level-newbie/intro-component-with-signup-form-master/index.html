@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="part-one">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+
+    <div class="part-two">
+      <div>
+        <p>Try it free 7 days then $20/mo. thereafters</p>
+      </div>
+
+      <div class="form">
+        <form action="">
+          <div>
+            <input class="field" type="text" placeholder="First Name" name="First Name">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <div class="error-msg"></div>
+          </div>
+
+          <div>
+            <input class="field" type="text" placeholder="Last Name" name="Last Name">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <div class="error-msg"></div>
+          </div>
+
+          <div>
+            <input id="field-email" type="text" placeholder="Email" name="Email">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <div class="error-msg-email"></div>
+          </div>
+
+          <div>
+            <input class="field" type="text" placeholder="Password" name="Password">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+            <div class="error-msg"></div>
+          </div>
+          
+          <button type="submit">Claim your free trial </button>
+        </form>
+
+        <div class="terms">
+          <p>  By clicking the button, you are agreeing to our <span>Terms and Services</span> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <script src="index.js"></script>
+  </footer>
+</body>
+</html>
