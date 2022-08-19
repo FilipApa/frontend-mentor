@@ -1,142 +1,113 @@
-const firstNameEl = document.querySelector('#first-name');
-const lastNameEl = document.querySelector('#last-name');
-const passwordEl = document.querySelector('#password');
-const confirmPasswordEl = document.querySelector('#confirm-password');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const form = document.getElementById('form-free-trail');
 
-const form = document.querySelector('#signup');
+function isRequired(input) {
+    return input.value === "" ? false : true;
+}
 
+function isEmailValid(input) {
+    const mailFormat =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return input.value.match(mailFormat)
+}
 
-const checkfirstName = () => {
-
-    let valid = false;
-
-    const min = 3,
-        max = 25;
-
-    const firstName = firstNameEl.value.trim();
-
-    if (!isRequired(firstName)) {
-        showError(firstNameEl, 'First Name cannot be blank.');
-    } else if (!isBetween(firstName.length, min, max)) {
-        showError(firstNameEl, `First Name must be between ${min} and ${max} characters.`)
-    } else {
-        showSuccess(firstNameEl);
-        valid = true;
-    }
-    return valid;
-};
-
-
-const checklastName = () => {
-    let valid = false;
-    const lastName = lastNameEl.value.trim();
-    if (!isRequired(lastName)) {
-        showError(lastNameEl, 'Last Name cannot be blank.');
-    } else if (!islastNameValid(lastName)) {
-        showError(lastNameEl, 'Last Name is not valid.')
-    } else {
-        showSuccess(lastNameEl);
-        valid = true;
-    }
-    return valid;
-};
-
-const checkPassword = () => {
-    let valid = false;
-
-
-    const password = passwordEl.value.trim();
-
-    if (!isRequired(password)) {
-        showError(passwordEl, 'Password cannot be blank.');
-    } else if (!isPasswordSecure(password)) {
-        showError(passwordEl, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
-    } else {
-        showSuccess(passwordEl);
-        valid = true;
-    }
-
-    return valid;
-};
-
-const checkConfirmPassword = () => {
-    let valid = false;
-    // check confirm password
-    const confirmPassword = confirmPasswordEl.value.trim();
-    const password = passwordEl.value.trim();
-
-    if (!isRequired(confirmPassword)) {
-        showError(confirmPasswordEl, 'Please enter the password again');
-    } else if (password !== confirmPassword) {
-        showError(confirmPasswordEl, 'The password does not match');
-    } else {
-        showSuccess(confirmPasswordEl);
-        valid = true;
-    }
-
-    return valid;
-};
-
-const islastNameValid = (lastName) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(lastName);
-};
-
-const isPasswordSecure = (password) => {
-    const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-    return re.test(password);
-};
-
-const isRequired = value => value === '' ? false : true;
-const isBetween = (length, min, max) => length < min || length > max ? false : true;
-
-
-const showError = (input, message) => {
-    // get the form-field element
+function showErrorMessage(input, message) {
     const formField = input.parentElement;
-    // add the error class
+
     formField.classList.remove('success');
     formField.classList.add('error');
 
-    // show the error message
     const error = formField.querySelector('small');
     error.textContent = message;
-};
+}
 
-const showSuccess = (input) => {
-    // get the form-field element
+function showSuccess(input) {
     const formField = input.parentElement;
 
-    // remove the error class
     formField.classList.remove('error');
     formField.classList.add('success');
 
-    // hide the error message
     const error = formField.querySelector('small');
-    error.textContent = '';
+    error.textContent = "";
+}
+
+function checkFirstName() {
+    let valid = false
+
+    if(isRequired(firstName)) {
+        showSuccess(firstName)
+        valid = true
+
+    }else {
+        showErrorMessage(firstName, "First Name cannot be empty")
+    }
+
+    return valid;
+}
+
+function checkLastName() {
+    let valid = false
+
+    if(isRequired(lastName)) {
+        showSuccess(lastName)
+        valid = true;
+
+    }else {
+        showErrorMessage(lastName, "Last Name cannot be empty")
+    }
+
+    return valid;
+}
+
+function checkPassword() {
+    let valid = false;
+
+    if(isRequired(password)) {
+        showSuccess(password)
+        valid = true;
+    }else {
+        showErrorMessage(password, "Password cannot be empty")
+    }
+
+    return valid;
+}
+
+function checkEmail() {
+    let valid = false
+
+    if(!isRequired(email)) {
+        showErrorMessage(email, "Email cannot be empty")
+        valid = false
+
+    } else if(!isEmailValid(email)){
+        showErrorMessage(email, "Looks like this is not an email")
+        valid = false;
+    } else {
+        showSuccess(email)
+        valid = true
+    }
+    return valid;
 }
 
 
-form.addEventListener('submit', function (e) {
-    // prevent the form from submitting
+document.addEventListener('submit', (e) => {
     e.preventDefault();
-
+    
     // validate fields
-    let isfirstNameValid = checkfirstName(),
-        islastNameValid = checklastName(),
+    let isfirstNameValid = checkFirstName(),
+        islastNameValid = checkLastName(),
         isPasswordValid = checkPassword(),
-        isConfirmPasswordValid = checkConfirmPassword();
+        isEmailValid = checkEmail();
 
     let isFormValid = isfirstNameValid &&
         islastNameValid &&
         isPasswordValid &&
-        isConfirmPasswordValid;
+        isEmailValid ;
+})
 
-    // submit to the server if the form is valid
-    if (isFormValid) {
-
-    }
-});
+//Add Instant feedback feature
 
 
 const debounce = (fn, delay = 500) => {
@@ -155,17 +126,17 @@ const debounce = (fn, delay = 500) => {
 
 form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
-        case 'firstName':
-            checkfirstName();
+        case 'first-name':
+            checkFirstName();
             break;
-        case 'lastName':
-            checklastName();
+        case 'last-name':
+            checkLastName();
             break;
         case 'password':
             checkPassword();
             break;
-        case 'confirm-password':
-            checkConfirmPassword();
+        case 'email':
+            checkEmail();
             break;
     }
 }));
