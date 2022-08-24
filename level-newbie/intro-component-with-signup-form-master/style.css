@@ -1,5 +1,144 @@
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --greeDark: hsl(154, 52%, 43%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: hsl(246, 25%, 77%);
+}
+
 body, input, button {
     font-family: "Poppins", sans-serif;
+    box-sizing:border-box;
+
+}
+
+body {
+    background-image: url('./images/bg-intro-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-color: var(--red);
+}
+.container {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.part-one,
+.part-two {
+    padding:0 20px;
+}
+
+.part-one {
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 35px ;
+}
+
+.part-one h1 {
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.part-one p {
+    font-size: 14px;
+}
+
+.part-two {
+    padding-bottom: 20px;
+}
+
+.part-two .for-free {
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 15px 0;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0px 9px 4px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 9px 4px 0px rgba(0,0,0,0.27);
+    box-shadow: 0px 9px 4px 0px rgba(0,0,0,0.27);
+}
+
+.part-two .for-free p {
+    max-width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.part-two .for-free span {
+   font-weight: 600;
+}
+
+.part-two .form{
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    -webkit-box-shadow: 0px 9px 4px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 9px 4px 0px rgba(0,0,0,0.27);
+    box-shadow: 0px 9px 4px 0px rgba(0,0,0,0.27);
+ 
+}
+
+.part-two form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.part-two form,
+.part-two input,
+.part-two .form-field,
+.part-two button {
+    width: 100%;
+}
+
+.part-two input {
+    border: 1px solid var(--grayishBlue);
+    border-radius: 3px;
+    padding: 13px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+
+.part-two .submit-btn {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 13px 0;
+    margin-bottom: 15px;
+    transition: all 0.2s;
+    -webkit-box-shadow: 0px 6px 2px 0px var(--greeDark);
+    -moz-box-shadow: 0px 6px 2px 0px var(--greeDark);
+    box-shadow: 0px 6px 2px 0px var(--greeDark);
+}
+
+.part-two .submit-btn:hover {
+    background-color: var(--green);
+}
+
+.part-two .terms {
+    font-size: 10px;
+    max-width: 85%;
+    text-align: center;
+    color: var(--grayishBlue);
+}
+
+.part-two .terms a{
+    color: var(--red);
+    font-weight: 600;
 }
 
 
@@ -21,4 +160,10 @@ svg {
 
 .form-field small {
     color: red;
+}
+
+@media screen and (min-width:650px) {
+    body {
+        background-image: url('./images/bg-intro-desktop.png');
+    }
 }
