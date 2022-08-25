@@ -187,4 +187,35 @@ svg {
     body {
         background-image: url('./images/bg-intro-desktop.png');
     }
+
+    .container {
+        max-width: 1000px;
+        height: 100vh;
+        flex-direction: row;
+        padding: 20px;
+       
+    }
+
+    .part-one,
+    .part-two {
+        width: 50%;
+    }
+
+    .part-one {
+        text-align: start;
+    }
+
+    .part-one h1 {
+        font-size: 36px;
+    }
+
+
+    .part-one h1,
+    .part-one p {
+        max-width: 400px;
+    }
+
+    .part-two .for-free p {
+        max-width: 100%;
+    }
 }
