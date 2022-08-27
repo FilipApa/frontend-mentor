@@ -23,21 +23,27 @@
     </header>
     
     <main>
-      <div>
-        <h1 class="title">
+      <div class="title-container">
+        <h1>
           We are launching <span>soon!</span> 
         </h1>
-        <h2 class="subtitle">
+        <h2>
           Subscribe and get notified
         </h2>
       </div>
   
-      <form action="">
-        <input type="email" name="email" id="email">
-        <button type="submit">Notify Me</button>
+      <form class="form-notify" action="">
+        <div class="form-field">
+          <input type="email" name="email" id="email" placeholder="Your email address...">
+          <small></small>
+        </div>
+        
+        <button type="submit" id="submit">Notify Me</button>
       </form>
   
-      <div class="illustration"></div>
+      <div class="illustration">
+        <img src="./images/illustration-dashboard.png" alt="">
+      </div>
     </main>
     
     <footer>

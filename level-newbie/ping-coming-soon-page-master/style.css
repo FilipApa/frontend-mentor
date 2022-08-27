@@ -6,6 +6,145 @@
     --gray: hsl(0, 0%, 59%);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body, input, button {
     font-family: 'Libre Franklin', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    padding: 40px 20px 10px 20px;
+}
+
+.logo {
+    margin-bottom: 35px;
+}
+
+.title-container h1,
+.title-container h2 {
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+.title-container h1 {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.title-container h1 span{
+    color: var(--darkBlue);
+    font-weight: 700;
+}
+
+.title-container h2 {
+   font-size: 13px;
+   margin-bottom: 25px;
+}
+
+.form-notify {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 75px;
+}
+
+.form-notify .form-field,
+.form-field input,
+.form-notify button {
+    max-width: 350px;
+    width: 100%;
+}
+
+.form-field input,
+.form-notify button {
+    border-radius: 25px;
+    padding: 12px 25px;
+}
+
+.form-field input {
+    margin-bottom: 10px;
+    border: 1px solid var(--paleBlue);
+}
+
+.form-notify button {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.2s ease-in;
+    -webkit-box-shadow: 0px 4px 10px 0px var(--blue);
+    -moz-box-shadow: 0px 4px 10px 0px var(--blue);
+    box-shadow: 0px 4px 10px 0px var(--blue);
+}
+
+.form-notify button:hover {
+    opacity: 0.9;
+}
+
+.form-field.error input {
+    border: 2px solid var(--lightRed);
+}
+
+.form-field.error small {
+    display: block;
+    color: var(--lightRed);
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.illustration {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.illustration img {
+    max-width: 100%;
+}
+
+.footer-icons {
+    margin-bottom: 30px;
+}
+
+.footer-icons,
+.footer-icons .icon  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--paleBlue);
+}
+
+.footer-icons .icon:nth-child(2) {
+    margin: 0 10px;
+}
+
+.footer-icons i {
+    color: var(--blue);
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: var(--gray);
 }
