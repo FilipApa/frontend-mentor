@@ -134,6 +134,15 @@ body, input, button {
     height: 30px;
     border-radius: 50%;
     border: 1px solid var(--paleBlue);
+    transition: all 0.2s ease-in;
+}
+
+.footer-icons .icon:hover {
+    background-color: var(--blue);
+}
+
+.footer-icons .icon:hover i{
+    color: #fff;
 }
 
 .footer-icons .icon:nth-child(2) {
@@ -147,4 +156,47 @@ body, input, button {
 .footer-copyright {
     font-size: 14px;
     color: var(--gray);
+}
+
+@media screen and (min-width:700px) {
+    .title-container h1 {
+        font-size: 35px;
+    }
+
+    .title-container h2 {
+        font-size: 16px;
+    }
+
+    .form-notify {
+      flex-direction: row;
+      align-items: flex-start;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    
+    .form-notify .form-field {
+        max-width: 65%;
+        margin-right: 10px;
+    }
+
+    .form-field input {
+        width: 100%;
+    }
+
+    .form-notify button {
+        width: 35%;
+    }
+
+    .form-field input {
+        margin-bottom: 0;
+    }
+
+    .form-field.error small {
+        text-align: left;
+        font-size: 12px;
+        margin-bottom: 0;
+        padding-left: 25px;
+        padding-top: 8px;
+    }
+    
 }
