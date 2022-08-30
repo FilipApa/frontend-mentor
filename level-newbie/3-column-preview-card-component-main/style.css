@@ -20,6 +20,7 @@ body {
 .row {
     padding: 45px 30px;
     position: relative;
+    max-height: 400px;
 }
 
 .sedans {
@@ -59,7 +60,7 @@ h2 {
 p {
     color: var(--transparentWhiteParagraph);
     font-size: 15px;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     line-height: 1.5;
 }
 
@@ -71,8 +72,6 @@ button {
     transition: all 0.1s linear;
     cursor: pointer;
     font-family: 'Lexend Deca', sans-serif;
-    position: absolute;
-    bottom: 35px;
 }
 
 button:hover {
@@ -88,6 +87,10 @@ button:hover {
         display: flex;
         min-width: 650px;
         max-width: 900px;
+    }
+
+    .row {
+        height: auto;
     }
 
     .sedans {
