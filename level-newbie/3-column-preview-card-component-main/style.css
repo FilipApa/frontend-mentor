@@ -11,7 +11,7 @@ body {
     background-color: var(--veryLightGray);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     padding: 60px 20px;
     height: 100vh;
@@ -81,6 +81,9 @@ button:hover {
 }
 
 @media screen and (min-width:700px) {
+    body {
+        padding: 0;
+    }
     .container {
         display: flex;
         min-width: 650px;
