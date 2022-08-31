@@ -1,3 +1,10 @@
+:root {
+    --html: #f06529; 
+    --css: #2965f1;
+    --js: #FDC72E;
+    --border-color: hsl(227, 100%, 92%);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -39,7 +46,7 @@ header {
 
 /*COLLAPSE*/
 .collapsible {
-    border: 1px solid hsl(227, 100%, 92%);
+    border: 1px solid var(--border-color);
     background-color: #fff;
     cursor: pointer;
     padding: 1.8rem;
@@ -50,6 +57,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.collapsible:focus {
+    border: 1px solid var(--html);
 }
 
 .collapsible i{
@@ -81,7 +92,7 @@ header {
 /*CARD*/
 .card {
     border-radius: 1rem;
-    border: 1px solid hsl(227, 100%, 92%); 
+    border: 1px solid var(--border-color); 
     display: flex;
     flex-direction: column;
     align-items: stretch;  
@@ -107,7 +118,36 @@ header {
     text-align: center;
     font-weight: 400;
     font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
+
+.card-bottom .tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto 1.8rem auto;
+}
+
+.card-bottom .tag {
+   text-transform: uppercase;
+   font-size: 1.8rem;
+   font-weight: 700;
+   margin: 0 0.5rem;
+}
+
+.card-bottom .html {
+    color: var(--html);
+}
+
+.card-bottom .css {
+    color: var(--css);
+}
+
+.card-bottom .js {
+    color: var(--js);
+}
+
 
 @media screen and (min-width: 500px) {
     .card {
