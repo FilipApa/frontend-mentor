@@ -61,6 +61,8 @@ body {
 /*CARD*/
 .card {
     max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid hsl(227, 100%, 92%);
     
 }
 
@@ -76,5 +78,16 @@ body {
 
 .card-top img {
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-bottom {
+    
+}
+
+.card-bottom h3 {
+    text-align: center;
+    font-weight: 400;
 }
 

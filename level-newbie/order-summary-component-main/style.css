@@ -6,13 +6,22 @@
     --darkBlue: hsl(223, 47%, 23%);
 }
 
+* {
+     box-sizing: border-box;
+}
+
 
 body {
     background-image: url('./images/pattern-background-mobile.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 50px 25px;
+    margin: 0;
 }
 
 p {
@@ -20,22 +29,14 @@ p {
     color: var(--desaturatedBlue);
 }
 
-.container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-family: 'Red Hat Display', sans-serif;
-}
 
 .card {
     max-width: 400px;
-    width: 100%;
     border-radius: 20px;
     background-color: #fff;
-   
+    -webkit-box-shadow: 0px 25px 22px -20px #000;
+    -moz-box-shadow: 0px 25px 22px -20px #000;
+    box-shadow: 0px 13px 22px -20px #000;
 }
 
 .card-top img{
@@ -63,20 +64,25 @@ p {
 }
 
 .card-plan {
-    width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--veryPaleeBlue);
+    width: 100%;
     border-radius: 10px;
     padding: 20px;
 }
 
+.card-plan div:first-child{
+    display: flex;
+    align-items: center;
+}
+
 .card-plan-anual {
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: -20%;
 }
 
 .card-plan-anual p:first-child {
@@ -97,7 +103,6 @@ p {
     padding: 15px 20px 0 20px;
 }
 
-
 .btn {
     border-color: transparent;
     width: 100%;
@@ -114,9 +119,9 @@ p {
 }
 
 .btn.shade {
-    -webkit-box-shadow: 0px 25px 39px -19px var(--brightBlue);
-    -moz-box-shadow: 0px 25px 39px -19px var(--brightBlue);
-    box-shadow: 0px 25px 39px -19px var(--brightBlue);
+    -webkit-box-shadow: 0px 25px 22px -20px var(--brightBlue);
+    -moz-box-shadow: 0px 25px 22px -20px var(--brightBlue);
+    box-shadow: 0px 25px 22px -20px var(--brightBlue);
 }
 
 .btn:hover {
@@ -133,7 +138,7 @@ p {
 .btn.transparent:hover {
     color: var(--darkBlue);
 }
-@media screen and (min-width:375px) {
+@media screen and (min-width:700px) {
     body {
         background-image: url('./images/pattern-background-desktop.svg');
     }
