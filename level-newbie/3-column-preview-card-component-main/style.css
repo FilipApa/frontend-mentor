@@ -68,6 +68,7 @@ p {
 
 button {
     max-width: 150px;
+    margin-top: auto;
     border: 1px solid var(--veryLightGray);
     border-radius: 25px;
     padding: 12px 32px;
