@@ -20,7 +20,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Red Hat Display', sans-serif;
-    padding: 50px 25px;
+    padding: 0 25px;
+    height: 100vh;
     margin: 0;
 }
 
