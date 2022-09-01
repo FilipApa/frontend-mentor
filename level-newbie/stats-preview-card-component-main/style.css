@@ -33,6 +33,11 @@ body {
 
 .img-section {
     position: relative;
+    background-image: url('./images/image-header-mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
 }
 
 .img-background {
@@ -45,13 +50,6 @@ body {
     right: 0;
     mix-blend-mode: multiply;
     opacity: 84%;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .text-section {
@@ -113,7 +111,7 @@ img {
     }
 }
 
-@media screen and (min-width:726px) {
+@media screen and (min-width:1100px) {
     .wrapper{
         display: flex;
         flex-direction: row-reverse;
@@ -124,11 +122,16 @@ img {
         width: 50%;
     }
 
+    .img-section {
+        background-image: url('./images/image-header-desktop.jpg');
+        height: auto;
+    }
+
     .text-section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding:10px 40px;
+        padding: 10px 40px;
     }
 
     .text-section .text-wrapper {
