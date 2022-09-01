@@ -177,8 +177,6 @@ h1,h2,h3,h4 {
         transform: rotate(135deg);
     }
 
-
-
     .card-info .fa-share-from-square {
         color: var(--veryDarkGrayishBlue);
     }

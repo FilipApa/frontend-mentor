@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    max-width: 1100px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -50,6 +50,8 @@ body {
 img {
     width: 100%;
     height: auto;
+    mix-blend-mode: multiply; 
+    opacity: 84%;
 }
 
 .text-section {
