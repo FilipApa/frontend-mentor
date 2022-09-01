@@ -15,12 +15,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-
-    /*  */
 }
 
 .container {
     max-width: 1100px;
+    margin: 0 auto;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -38,20 +37,20 @@ body {
 
 .img-background {
     background-color: var(--softViolet);
-    opacity: 0.35;
     z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: multiply; 
+    bottom: 0;
+    right: 0;
+    mix-blend-mode: multiply;
     opacity: 84%;
 }
 
 img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: fill;
 }
 
 .text-section {
@@ -113,11 +112,7 @@ img {
     }
 }
 
-@media screen and (min-width:1200px) {
-    img {
-        height: 100%;
-    }
-
+@media screen and (min-width:800px) {
     .wrapper{
         display: flex;
         flex-direction: row-reverse;
