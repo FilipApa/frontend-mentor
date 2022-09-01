@@ -48,9 +48,10 @@ body {
 }
 
 img {
-    width: 100%;
+    display: block;
+    max-width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .text-section {
@@ -112,7 +113,7 @@ img {
     }
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width:726px) {
     .wrapper{
         display: flex;
         flex-direction: row-reverse;
