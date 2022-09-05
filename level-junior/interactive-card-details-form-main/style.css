@@ -6,3 +6,26 @@
     --darkGrayishViolet: hsl(279, 6%, 55%);
     --veryDarkViolet: hsl(278, 68%, 11%);
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.card-details .card-details-front,
+.card-details .card-details-back {
+    max-width: 447px;
+    height: 245px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-details .card-details-front {
+    background-image: url('./images/bg-card-front.png');
+}
+
+.card-details .card-details-back {
+    background-image: url('./images/bg-card-back.png');
+}
