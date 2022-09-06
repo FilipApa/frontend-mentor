@@ -85,3 +85,9 @@ body {
     right: 0;
     top: 122px;
 }
+
+.card-details .card-cvc {
+    font-size: 11px;
+    top: 71px;
+    right: 18px;
+}
