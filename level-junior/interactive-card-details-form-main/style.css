@@ -13,12 +13,13 @@
 
 * {
      box-sizing: border-box;
+     font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Space Grotesk', sans-serif;
+    
 }
 
 .card-details {
@@ -90,4 +91,53 @@ body {
     font-size: 11px;
     top: 71px;
     right: 18px;
+}
+
+.form-section {
+    padding: 87px 22px 30px 22px;
+}
+
+.form-section .form-field,
+.form-section .form-field-double {
+    display: flex;
+}
+
+.form-section .form-field-double.last {
+    margin-bottom: 12px;
+}
+
+.form-section .form-field {
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-section .form-field label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--veryDarkViolet);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+}
+
+.form-section .form-field input {
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid var(--lightGrayishViolet);
+    color: var(--lightGrayishViolet);
+}
+
+.form-section .card-date {
+    width: 60px;
+    margin-right: 6px;
+}
+
+.form-section button {
+    width: 100%;
+    background-color: var(--veryDarkViolet);
+    border: 1px solid var(--veryDarkViolet);
+    border-radius: 5px;
+    padding: 14px 0;
+    color: var(--white);
+    letter-spacing: 1px;
 }
