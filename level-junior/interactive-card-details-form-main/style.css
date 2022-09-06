@@ -6,6 +6,10 @@
     --darkGrayishViolet: hsl(279, 6%, 55%);
     --veryDarkViolet: hsl(278, 68%, 11%);
 }
+.container {
+    max-width: 375px;
+    margin: 0 auto;
+}
 
 body {
     margin: 0;
@@ -14,12 +18,26 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
-.card-details .card-details-front,
-.card-details .card-details-back {
-    max-width: 447px;
-    height: 245px;
+.card-details {
+    position: relative;
+    background-image: url('./images/bg-main-mobile.png');
     background-size: cover;
     background-position: center;
+}
+
+.card-wrapper {
+    width: 100%;
+    height: 240px;
+}
+
+.card-details .card-details-front,
+.card-details .card-details-back {
+    max-width: 290px;
+    height: 156px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: absolute;
 }
 
 .card-details .card-details-front {
