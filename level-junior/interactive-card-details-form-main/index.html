@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,36 +18,31 @@
     <h1 hidden>Interactive card details form</h1>
     <section class="card-details" aria-label="card-details-output">
        
-        <div class="card-details-front" aria-label="card-details-front-side">
-          <div class="card-wrapper">
-            <div aria-label="card-logo">
-              <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
-            </div>
-
-            <div>
-              <div class="card-digits">
-                <span id="card-digits">0000 0000 0000 0000</span>
-              </div>
-
-              <div>
-
-                <div class="card-name">
-                  <span id="card-name">Jane Appleseed</span>
-                </div>
-
-                <div class="card-date">
-                  <span id="month">00</span>/
-                  <span id="year">00</span>
-                </div>
-              </div>
-
+      <div class="card-details-front" aria-label="card-details-front-side">
+        <div class="card-wrapper">
+          <div aria-label="card-logo">
+            <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
           </div>
+
+          <div class="card-digits">
+            <span id="card-digits">0000 0000 0000 0000</span>
+          </div>
+
+          <div class="card-name">
+            <span id="card-name">Jane Appleseed</span>
+          </div>
+
+          <div class="card-date">
+            <span id="month">00</span>/
+            <span id="year">00</span>
+          </div>
+          
         </div>
       </div>
 
       <div class="card-details-back" aria-label="card-details-back-side">
         <div class="card-wrapper">
-          <span id="cvc">000</span>
+          <span class="card-cvc" id="cvc">000</span>
         </div>
       </div>    
     </section>
