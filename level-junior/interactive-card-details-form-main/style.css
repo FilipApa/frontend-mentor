@@ -61,6 +61,7 @@ body {
     color: var(--white);
 }
 
+.card-details .card-logo,
 .card-details .card-digits,
 .card-details .card-name,
 .card-details .card-date,
@@ -75,15 +76,17 @@ body {
 }
 
 .card-details .card-name {
-    font-size: 11px;
     font-weight: 300;
     text-transform: uppercase;
-    top: 122px;   
 }
 
 .card-details .card-date {
-    font-size: 11px;
     right: 0;
+}
+
+.card-details .card-name,
+.card-details .card-date {
+    font-size: 11px;
     top: 122px;
 }
 
@@ -95,6 +98,11 @@ body {
 
 .form-section {
     padding: 87px 22px 30px 22px;
+}
+
+.form-section .form-wrapper {
+    max-width: 375px;
+    width: 100%;
 }
 
 .form-section .form-field,
@@ -111,9 +119,13 @@ body {
     margin-bottom: 15px;
 }
 
+.form-section .form-field.cvc {
+    flex-grow: 1;
+}
+
 .form-section .form-field label {
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--veryDarkViolet);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -153,7 +165,7 @@ body {
 @media screen and ( min-width:1100px ) {
     .container {
         max-width: 100%;
-        height: 900px;
+        height: 100vh;
         display: flex;
     }
 
@@ -161,5 +173,73 @@ body {
         width: 483px;
         height: 100%;
         background-image: url('./images/bg-main-desktop.png');
+    }
+
+    .card-details .card-details-front, 
+    .card-details .card-details-back {
+        width: 445px;
+        height: 245px;
+        padding: 0 30px;
+    }
+    
+    .card-details .card-details-front {
+        right: -127px;
+        top: 18.3%;
+        bottom: unset;
+        left: unset;
+    }
+
+    .card-details .card-details-back {
+        top: 50%;
+        right: -222px;
+    }
+
+    .card-details .card-logo {
+        top: 30px;
+    }
+
+    .card-details .card-digits {
+        font-size: 30px;
+        letter-spacing: 2px;
+        top: 138px;
+    }
+
+    .card-details .card-name,
+    .card-details .card-date {
+        font-size: 17px;
+        top: 200px;
+    }
+
+    .card-details .card-cvc {
+        font-size: 17px;
+        top: 109px;
+        right: 28px;
+    }
+
+    .form-section {
+        padding: 0;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-section .form-wrapper {
+        max-width: 375px;
+        width: 100%;
+        margin-left: 120px;
+    }
+
+    .form-section .form-field {
+        margin-bottom: 20px;
+    }
+
+    .form-section .form-field label {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .form-section .form-field input {
+        font-size: 16px;
     }
 }
