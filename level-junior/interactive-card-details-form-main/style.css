@@ -184,13 +184,13 @@ body {
     
     .card-details .card-details-front {
         right: -127px;
-        top: 18.3%;
+        top: 21%;
         bottom: unset;
         left: unset;
     }
 
     .card-details .card-details-back {
-        top: 50%;
+        top: 52%;
         right: -222px;
     }
 
