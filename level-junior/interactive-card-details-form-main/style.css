@@ -18,8 +18,7 @@
 
 body {
     margin: 0;
-    padding: 0;
-    
+    padding: 0;    
 }
 
 .card-details {
@@ -69,6 +68,14 @@ body {
     position: absolute;
 }
 
+.card-details .card-logo {
+    top: 20px;
+}
+
+.card-details .card-logo img{
+    width: 50px;
+}
+
 .card-details .card-digits {
     font-size: 20px;
     letter-spacing: 1px;
@@ -111,20 +118,21 @@ body {
 }
 
 .form-section .form-field-double.last {
-    margin-bottom: 12px;
+    margin-bottom: 7px;
 }
 
 .form-section .form-field {
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
 }
 
 .form-section .form-field.cvc {
     flex-grow: 1;
+    width: 100px
 }
 
 .form-section .form-field label {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--veryDarkViolet);
     text-transform: uppercase;
@@ -136,6 +144,7 @@ body {
     padding: 10px;
     border-radius: 7px;
     border: 1px solid var(--lightGrayishViolet);
+    font-size: 18px;
     color: var(--darkGrayishViolet);
 }
 
@@ -148,8 +157,8 @@ body {
 }
 
 .form-section .card-date {
-    width: 60px;
-    margin-right: 6px;
+    width: 70px;
+    margin-right: 12px;
 }
 
 .form-section button {
@@ -158,6 +167,7 @@ body {
     border: 1px solid var(--veryDarkViolet);
     border-radius: 5px;
     padding: 14px 0;
+    font-size: 16px;
     color: var(--white);
     letter-spacing: 1px;
 }
@@ -198,6 +208,10 @@ body {
         top: 30px;
     }
 
+    .card-details .card-logo img {
+        width: 84px;
+    }
+
     .card-details .card-digits {
         font-size: 30px;
         letter-spacing: 2px;
@@ -235,11 +249,7 @@ body {
     }
 
     .form-section .form-field label {
-        font-size: 15px;
         margin-bottom: 12px;
     }
 
-    .form-section .form-field input {
-        font-size: 16px;
-    }
 }
