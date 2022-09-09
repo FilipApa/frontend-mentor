@@ -25,6 +25,7 @@ function showError(msg, displayElem) {
 
     const error = parentElement.querySelector('small');
     error.innerText = msg;
+
 }
 
 function showSucceess() {
@@ -62,13 +63,15 @@ function formatCardEleme(event, displayElem) {
 function checkName() {
     let valid;
     const isEmpty = isRequired(formName);
-
+    
     if(!isEmpty) {
-        showError('Can\'t be blank');
+        showError('Can\'t be blank', formName);
         valid = false;
-    } 
-
-    valid = true;
+        console.log('if')
+    }  else {
+        valid = true;
+    }
+    
     return valid;
 
 }
@@ -78,7 +81,7 @@ function checkNum() {
     const isEmpty = isRequired(formNum);
 
     if(!isEmpty) {
-        showError('Can\'t be blank');
+        showError('Can\'t be blank', formNum);
         valid = false;
     } 
 
@@ -92,7 +95,7 @@ function checkMonth() {
     const isEmpty = isRequired(formMonth);
 
     if(!isEmpty) {
-        showError('Can\'t be blank');
+        showError('Can\'t be blank', formMonth);
         valid = false;
     } 
 
@@ -106,7 +109,7 @@ function checkYear() {
     const isEmpty = isRequired(formYear);
 
     if(!isEmpty) {
-        showError('Can\'t be blank');
+        showError('Can\'t be blank', formYear);
         valid = false;
     } 
 
@@ -120,7 +123,7 @@ function checkCvc() {
     const isEmpty = isRequired(formCvc);
 
     if(!isEmpty) {
-        showError('Can\'t be blank');
+        showError('Can\'t be blank', formCvc);
         valid = false;
     } 
 
@@ -131,19 +134,19 @@ function checkCvc() {
 form.addEventListener('input', e => {
     switch(e.target.id) {
         case 'form-name':
-            formatCardEleme(e, formName);
+            formatCardEleme(e, cardName);
             break;
         case 'form-num':
-            formatCardEleme(e, formNum);
+            formatCardEleme(e, cardDigits);
             break;    
         case 'form-month':
-            formatCardEleme(e, formMonth);
+            formatCardEleme(e, cardMonth);
             break;       
         case 'form-year':
-            formatCardEleme(e, formYear);
+            formatCardEleme(e, cardYear);
             break;     
         case 'form-cvc':
-            formatCardEleme(e, formCvc);
+            formatCardEleme(e, cardCvc);
             break;      
     }
 });

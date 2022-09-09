@@ -132,7 +132,8 @@ body {
     width: 100px
 }
 
-.form-section .form-field.error input{
+.form-section .form-field.error input
+.form-section .form-field .form-field-double.error .card-date {
     border: 1px solid var(--redError);
 }
 
@@ -141,7 +142,8 @@ body {
     position: absolute;
 }
 
-.form-section .form-field.error small{
+.form-section .form-field.error small,
+.form-field .form-field-double.error small{
     display: block;
     color: var(--redError); 
 }
