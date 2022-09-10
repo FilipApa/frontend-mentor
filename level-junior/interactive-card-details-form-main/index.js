@@ -67,7 +67,6 @@ function formatCardEleme(event, displayElem) {
 function checkName() {
     let valid;
     const isEmpty = isRequired(formName);
-    console.log(isEmpty);
     if(!isEmpty) {
         showError('Can\'t be blank', formName);
         valid = false;
