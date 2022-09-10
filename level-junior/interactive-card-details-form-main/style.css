@@ -150,8 +150,9 @@ body {
     max-width: max-content;
 }
 
-.form-field .form-field-double.error .card-date + small{
-    bottom: -50px;
+.form-field.error #form-month + small,
+.form-field.error #form-year + small {
+    bottom: -37px;
 }
 
 .form-section .form-field label {

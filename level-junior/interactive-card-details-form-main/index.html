@@ -79,7 +79,6 @@
           <div class="form-field-double last">
             <div class="form-field">
               <label for="card-date"> Exp. Date (MM/YY)</label>
-
               <div class="form-field-double">
                 <div class="form-field">
                   <input 
@@ -97,7 +96,7 @@
                   <input 
                   type="number" 
                   name="card-year" 
-                  class="card-date" 
+                  class="card-date " 
                   id="form-year" 
                   placeholder="YY"
                   maxlength="2"
@@ -110,7 +109,8 @@
 
             <div class="form-field cvc">
               <label for="card-cvc">CVC</label>
-              <input 
+              <div class="form-field">
+                <input 
                 type="number" 
                 name="card-cvc" 
                 id="form-cvc" 
@@ -119,6 +119,7 @@
                 oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                 >
               <small></small>
+              </div>
             </div>
 
           </div>
