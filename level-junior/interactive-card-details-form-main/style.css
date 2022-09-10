@@ -132,9 +132,9 @@ body {
     width: 100px
 }
 
-.form-section .form-field.error input
-.form-section .form-field .form-field-double.error .card-date {
-    border: 1px solid var(--redError);
+.form-section .form-field.error input,
+.form-field .form-field-double.error input {
+    border-color: var(--redError) !important;
 }
 
 .form-section .form-field small{
@@ -146,6 +146,7 @@ body {
 .form-field .form-field-double.error small{
     display: block;
     color: var(--redError); 
+    bottom: -20px;
 }
 
 .form-section .form-field label {

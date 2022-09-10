@@ -51,9 +51,9 @@ function showSucceess() {
 function formatCardEleme(event, displayElem) {
     const target = event.target;
     let targetValue = target.value;
-
+ 
     if(displayElem === cardDigits) {
-        targetValue = targetValue.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+        targetValue = targetValue.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim(); 
         displayElem.innerText = targetValue;
     } else {
         displayElem.innerText = targetValue;
@@ -67,7 +67,6 @@ function checkName() {
     if(!isEmpty) {
         showError('Can\'t be blank', formName);
         valid = false;
-        console.log('if')
     }  else {
         valid = true;
     }
