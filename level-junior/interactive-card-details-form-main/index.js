@@ -46,10 +46,15 @@ function showThankYou() {
     formMsg.classList.add('form-msg');
     formMsg.innerText = 'We\'ve added your card details';
 
+    const formBtn = document.createElement('a');
+    formBtn.classList.add('btn');
+    formBtn.href = '/'
+    formBtn.innerText = 'Continue';
+
     formWrapper.insertAdjacentElement('beforeend', formIcon );
     formWrapper.insertAdjacentElement('beforeend', formHeading );
     formWrapper.insertAdjacentElement('beforeend', formMsg );
-
+    formWrapper.insertAdjacentElement('beforeend', formBtn );
 }
 
 function formatCardEleme(event, displayElem) {

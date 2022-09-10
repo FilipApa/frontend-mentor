@@ -16,7 +16,7 @@
      font-family: 'Space Grotesk', sans-serif;
 }
 
-body {
+body,p,h1,h2,h3,h4,h5,h6 {
     margin: 0;
     padding: 0; 
 }
@@ -184,7 +184,8 @@ body {
     margin-right: 12px;
 }
 
-.form-section button {
+.form-section .btn,
+#form-wrapper .btn {
     width: 100%;
     background-color: var(--veryDarkViolet);
     border: 1px solid var(--veryDarkViolet);
@@ -193,6 +194,34 @@ body {
     font-size: 16px;
     color: var(--white);
     letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*THANK YOU PART*/
+.form-section #form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-section #form-wrapper img {
+    width: 65px;
+    margin-bottom: 30px;
+}
+
+.form-section #form-wrapper h2 {
+    text-transform: uppercase;
+    color: var(--veryDarkViolet);
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.form-section #form-wrapper p {
+    color: var(--darkGrayishViolet);
+    margin-bottom: 50px;
 }
 
 @media screen and ( min-width:1440px ) {
