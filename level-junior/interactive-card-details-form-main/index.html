@@ -18,9 +18,9 @@
     <h1 hidden>Interactive card details form</h1>
     <section class="card-details" aria-label="card-details-output">
        
-      <div class="card-details-front" aria-label="card-details-front-side">
+      <div class="card-details-front">
         <div class="card-wrapper">
-          <div class="card-logo" aria-label="card-logo">
+          <div class="card-logo">
             <img src="./images/card-logo.svg" alt="logo">
           </div>
 
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <div class="card-details-back" aria-label="card-details-back-side">
+      <div class="card-details-back">
         <div class="card-wrapper">
           <span class="card-cvc" id="card-cvc">000</span>
         </div>
@@ -52,7 +52,7 @@
       <div class="form-wrapper" id="form-wrapper">
         <form id="form">
           <div class="form-field">
-            <label for="card-name">Cardholder Name</label>
+            <label for="form-name">Cardholder Name</label>
             <input 
               type="text" 
               name="card-name" 
@@ -64,7 +64,7 @@
           </div>
 
           <div class="form-field">
-            <label for="card-num">Card Number</label>
+            <label for="form-num">Card Number</label>
             <input 
               type="number" 
               name="card-num" 
@@ -78,14 +78,14 @@
 
           <div class="form-field-double last">
             <div class="form-field">
-              <label for="card-date"> Exp. Date (MM/YY)</label>
+              <label for="form-date"> Exp. Date (MM/YY)</label>
               <div class="form-field-double">
                 <div class="form-field">
                   <input 
                   type="number" 
                   name="card-month" 
                   class="card-date" 
-                  id="form-month" 
+                  id="form-date" 
                   placeholder="MM" 
                   maxlength="2"
                   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
@@ -96,8 +96,8 @@
                   <input 
                   type="number" 
                   name="card-year" 
-                  class="card-date " 
-                  id="form-year" 
+                  class="card-date" 
+                  id="form-date" 
                   placeholder="YY"
                   maxlength="2"
                   oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
@@ -108,7 +108,7 @@
             </div>
 
             <div class="form-field cvc">
-              <label for="card-cvc">CVC</label>
+              <label for="form-cvc">CVC</label>
               <div class="form-field">
                 <input 
                 type="number" 
