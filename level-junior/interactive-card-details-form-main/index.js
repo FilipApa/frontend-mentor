@@ -96,11 +96,19 @@ function checkMonth() {
     if(!isEmpty) {
         showError('Can\'t be blank', formMonth);
         valid = false;
-    } 
-
-    valid = true;
+    } else if(Number(formMonth.value) < 1) {
+        console.log(Number(formMonth.value));
+        showError('Value can\'t be less than 1', formMonth);
+        valid = false;
+    } else if(Number(formMonth.value) > 12) {
+        console.log(Number(formMonth.value));
+        showError('Value can\'t be bigger than 12', formMonth);
+        valid = false;
+    } else {
+        valid = true;
+    }
+ 
     return valid;
-
 }
 
 function checkYear() {
