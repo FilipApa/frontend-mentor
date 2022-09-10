@@ -25,10 +25,14 @@ function showError(msg, displayElem) {
 
     const error = parentElement.querySelector('small');
     error.innerText = msg;
-
 }
 
-function showSucceess() {
+function showSuccess(displayElem) {
+    const parentElement = displayElem.parentElement;
+    parentElement.classList.remove('error');
+}
+
+function showThankYou() {
     formWrapper.replaceChildren();
 
     const formIcon = document.createElement('img');
@@ -63,11 +67,12 @@ function formatCardEleme(event, displayElem) {
 function checkName() {
     let valid;
     const isEmpty = isRequired(formName);
-    
+    console.log(isEmpty);
     if(!isEmpty) {
         showError('Can\'t be blank', formName);
         valid = false;
     }  else {
+        showSuccess(formName);
         valid = true;
     }
     
@@ -83,6 +88,7 @@ function checkNum() {
         showError('Can\'t be blank', formNum);
         valid = false;
     } else {
+        showSuccess(formNum);
         valid = true;
     }
 
@@ -97,14 +103,13 @@ function checkMonth() {
         showError('Can\'t be blank', formMonth);
         valid = false;
     } else if(Number(formMonth.value) < 1) {
-        console.log(Number(formMonth.value));
-        showError('Value can\'t be less than 1', formMonth);
+        showError(`Value can\'t be \r\n less than 1`, formMonth);
         valid = false;
     } else if(Number(formMonth.value) > 12) {
-        console.log(Number(formMonth.value));
-        showError('Value can\'t be bigger than 12', formMonth);
+        showError(`Value can\'t be \r\n bigger than 12`, formMonth);
         valid = false;
     } else {
+        showSuccess(formMonth);
         valid = true;
     }
  
@@ -119,6 +124,7 @@ function checkYear() {
         showError('Can\'t be blank', formYear);
         valid = false;
     } else {
+        showSuccess(formYear);
         valid = true;
     }
 
@@ -132,10 +138,11 @@ function checkCvc() {
     if(!isEmpty) {
         showError('Can\'t be blank', formCvc);
         valid = false;
-    } else if(Number(formMonth.value) < 3) {
-        showError('Value can\'t be less than 3', formMonth);
+    } else if(Number(formCvc.value) < 3) {
+        showError(`Value can\'t be \r\n less than 3`, formCvc);
         valid = false;
     } else {
+        showSuccess(formCvc);
         valid = true;
     }
 
@@ -172,7 +179,7 @@ form.addEventListener('submit', (e) => {
     let isCardCvcValid = checkCvc();
 
     if(isCardNameValid && isCardNumValid && isCardMonthValid && isCardYearValid && isCardCvcValid) {
-        showSucceess();
+        showThankYou();
     }
 
 })

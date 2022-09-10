@@ -18,7 +18,7 @@
 
 body {
     margin: 0;
-    padding: 0;    
+    padding: 0; 
 }
 
 .card-details {
@@ -124,7 +124,6 @@ body {
 .form-section .form-field {
     flex-direction: column;
     margin-bottom: 22px;
-    position: relative;
 }
 
 .form-section .form-field.cvc {
@@ -139,7 +138,11 @@ body {
 
 .form-section .form-field small{
     display: none;
-    position: absolute;
+}
+
+.form-section .form-field.error,
+.form-field .form-field-double.error{
+    margin-bottom: 10px;
 }
 
 .form-section .form-field.error small,
@@ -147,12 +150,8 @@ body {
     display: block;
     color: var(--redError); 
     bottom: -20px;
-    max-width: max-content;
-}
-
-.form-field.error #form-month + small,
-.form-field.error #form-year + small {
-    bottom: -37px;
+    white-space: pre;
+    width: max-content;
 }
 
 .form-section .form-field label {
@@ -181,7 +180,7 @@ body {
 }
 
 .form-section .card-date {
-    width: 70px;
+    width: 85px;
     margin-right: 12px;
 }
 
