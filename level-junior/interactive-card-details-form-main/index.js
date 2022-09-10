@@ -82,11 +82,11 @@ function checkNum() {
     if(!isEmpty) {
         showError('Can\'t be blank', formNum);
         valid = false;
-    } 
+    } else {
+        valid = true;
+    }
 
-    valid = true;
     return valid;
-
 }
 
 function checkMonth() {
@@ -118,11 +118,11 @@ function checkYear() {
     if(!isEmpty) {
         showError('Can\'t be blank', formYear);
         valid = false;
-    } 
+    } else {
+        valid = true;
+    }
 
-    valid = true;
     return valid;
-
 }
 
 function checkCvc() {
@@ -132,9 +132,13 @@ function checkCvc() {
     if(!isEmpty) {
         showError('Can\'t be blank', formCvc);
         valid = false;
-    } 
+    } else if(Number(formMonth.value) < 3) {
+        showError('Value can\'t be less than 3', formMonth);
+        valid = false;
+    } else {
+        valid = true;
+    }
 
-    valid = true;
     return valid;
 }
 

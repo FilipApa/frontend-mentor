@@ -147,6 +147,11 @@ body {
     display: block;
     color: var(--redError); 
     bottom: -20px;
+    max-width: max-content;
+}
+
+.form-field .form-field-double.error .card-date + small{
+    bottom: -50px;
 }
 
 .form-section .form-field label {
