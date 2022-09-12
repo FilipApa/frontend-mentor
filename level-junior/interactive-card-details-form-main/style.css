@@ -163,7 +163,6 @@ form {
     font-weight: 500;
     color: var(--veryDarkViolet);
     text-transform: uppercase;
-    letter-spacing: 1px;
     margin-bottom: 7px;
 }
 
@@ -176,7 +175,7 @@ form {
 }
 
 .form-section .form-field input::placeholder {
-   color: var(--lightGrayishViolet);
+   color: var(--darkGrayishViolet);
 }
 
 .form-section .form-field input:focus {
@@ -305,7 +304,8 @@ form {
     }
 
     .form-section .form-field label {
-        margin-bottom: 12px;
+        font-size: 15px;
+        margin-bottom: 11px;
     }
 
     .form-section .form-field-double.last {
