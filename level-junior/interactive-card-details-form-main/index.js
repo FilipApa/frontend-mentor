@@ -62,7 +62,7 @@ function formatCardEleme(event, displayElem) {
     let targetValue = target.value;
  
     if(displayElem === cardDigits) {
-        targetValue = targetValue.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim(); 
+        targetValue = targetValue.replace(/(.{4})/g, '$1 ').trim(); 
         displayElem.innerText = targetValue;
     } else {
         displayElem.innerText = targetValue;
@@ -91,6 +91,9 @@ function checkNum() {
     if(!isEmpty) {
         showError('Can\'t be blank', formNum);
         valid = false;
+    } else if(! (/^\d+$/.test(formNum.value)) ){
+        showError('Wrong format,\r\n only numbers allowed', formNum);
+        valid = false;
     } else {
         showSuccess(formNum);
         valid = true;
@@ -105,6 +108,9 @@ function checkMonth() {
 
     if(!isEmpty) {
         showError('Can\'t be blank', formMonth);
+        valid = false;
+    } else if(! (/^\d+$/.test(formMonth.value)) ){
+        showError('Wrong format,\r\n only numbers allowed', formMonth);
         valid = false;
     } else if(Number(formMonth.value) < 1) {
         showError(`Value can\'t be \r\n less than 1`, formMonth);
@@ -127,7 +133,16 @@ function checkYear() {
     if(!isEmpty) {
         showError('Can\'t be blank', formYear);
         valid = false;
-    } else {
+    } else if(! (/^\d+$/.test(formYear.value)) ){
+        showError('Wrong format,\r\n only numbers allowed', formYear);
+        valid = false;
+    }  else if(Number(formYear.value) < 1) {
+        showError(`Value can\'t be \r\n less than 1`, formYear);
+        valid = false;
+    } else if(Number(formYear.value) > 99) {
+        showError(`Value can\'t be \r\n bigger than 99`, formYear);
+        valid = false;
+    }  else {
         showSuccess(formYear);
         valid = true;
     }
@@ -142,8 +157,15 @@ function checkCvc() {
     if(!isEmpty) {
         showError('Can\'t be blank', formCvc);
         valid = false;
-    } else if(Number(formCvc.value) < 3) {
-        showError(`Value can\'t be \r\n less than 3`, formCvc);
+    } else if(! (/^\d+$/.test(formCvc.value)) ){
+        showError('Wrong format,\r\n only numbers allowed', formCvc);
+        valid = false;
+    } 
+    else if(Number(formCvc.value) < 1) {
+        showError(`Value can\'t be \r\n less than 1`, formCvc);
+        valid = false;
+    } else if(Number(formCvc.value) > 999) {
+        showError(`Value can\'t be \r\n less than 999`, formCvc);
         valid = false;
     } else {
         showSuccess(formCvc);
