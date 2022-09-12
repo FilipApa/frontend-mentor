@@ -13,26 +13,45 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <section class="balance">
+      <div>
+        <h1>My balance</h1>
+        <span>  $921.48</span>
+      </div>
+      
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo" >
+      </div>
 
-  My balance
-  $921.48
+    </section>
+      
+    <section  class="chart-section">
+      <div>
+        <h2>Spending - Last 7 days</h2>
+        <div class="chart" role="table" id="chart">
+            <div class="chart-elemnt">
+              <span role="tooltip"></span>
+              <div class="chart-bar"></div>
+              <span class="day"></span>
+            </div>
+        </div>
+      </div>
 
-  Spending - Last 7 days
+      <div>
+        <div class="balance-total">
+          <h3>Total this month</h3>
+          <span id="balance-total-amount">$478.33</span>
+        </div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+        <div class="balance-precent"> 
+          <h4> from last month</h4>
+          <span>+2.4%</span>
+        </div>
+      </div>
+    </section>
 
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
+  </div>
   <script src="index.js"></script>
 </body>
 </html>
