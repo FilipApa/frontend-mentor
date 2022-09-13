@@ -35,6 +35,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color: var(--cream);
+	font-family: 'DM Sans', sans-serif;
+	height: 100vh;
 }
 ol, ul {
 	list-style: none;
@@ -53,7 +56,41 @@ table {
 }
 
 * {
-    font-family: 'DM Sans', sans-serif;
     box-sizing: border-box;
 }
 
+.container {
+	max-width: 375px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 10vh 15px;
+}
+
+.balance-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--softRed);
+	color: #fff;
+	border-radius: 15px;
+    padding: 23px;
+}
+
+.balance-section h1 {
+	margin-bottom: 10px;
+}
+
+.balance-section span {
+	font-size: 22px;
+    font-weight: 700;
+}
+
+.chart-section {
+	padding: 23px;
+}
+
+.chart-section h2{
+	font-size: 24px;
+	color: var(--darkBrown);
+	font-weight: 700;
+}
