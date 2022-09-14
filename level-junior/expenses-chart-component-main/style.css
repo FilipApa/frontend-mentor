@@ -88,6 +88,8 @@ table {
 
 .chart-section {
 	padding: 34px 23px;
+	border-radius: 15px;
+	background-color: var(--veryPaleOrange);
 }
 
 .chart-section div:first-child {
