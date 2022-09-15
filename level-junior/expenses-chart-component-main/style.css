@@ -87,26 +87,32 @@ table {
 }
 
 .chart-section {
-	padding: 34px 23px;
+	padding: 34px 14px;
 	border-radius: 15px;
 	background-color: var(--veryPaleOrange);
 }
 
-.chart-section .balance {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.chart-section h2 {
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--darkBrown);
+	margin-bottom: 40px;
 }
 
 .chart-section .chart {
 	display: flex;
-	justify-content: space-between;
+	align-items: flex-end;
 }
 
-.chart-section h2{
-	font-size: 24px;
-	font-weight: 700;
-	color: var(--darkBrown);
+.chart-section .chart-element {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.chart-section .chart-bar {
+	max-width: 32px;
+	border-radius: 2px
 }
 
 .chart-section .balance-total h3 {
@@ -119,7 +125,12 @@ table {
 	color: var(--darkBrown);	
 }
 
-.chart-section div:nth-child(2) .balance-precent {
+.chart-section .balance {
+	display: flex;
+	justify-content: space-between;
+}
+
+.chart-section .balance .balance-precent {
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: flex-start;
