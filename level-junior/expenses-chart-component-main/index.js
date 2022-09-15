@@ -13,6 +13,7 @@ async function getData() {
 
     const maxBalanceAmount = Math.max(...balance);
     const chartBarMaxHeight = 150;
+    const html = '';
 
     for(let value in dailyBalanceRes[0]) {
         let precentOfMaxVal = Math.ceil( dailyBalanceRes[0][value].amount / maxBalanceAmount * 100 );
@@ -25,9 +26,18 @@ async function getData() {
         } else {
             dailyBalanceRes[0][value].backColor = 'hsl(10, 79%, 65%)';
         }
-    }
 
-    console.log(dailyBalanceRes);
+        let chartHtml = `<div style="height:${dailyBalanceRes[0][value].barHeight}px; background-color:${dailyBalanceRes[0][value].backColor}" class="chart-bar"></div>`
+
+        let barHtml = `
+            <div class="chart-elemnt">
+              <span role="tooltip">$${dailyBalanceRes[0][value].amount}</span>
+              ${chartHtml}
+              <span class="day">${dailyBalanceRes[0][value].day}</span>
+            </div>
+        `        
+        chart.innerHTML += barHtml;
+    }
 }
 
 getData();

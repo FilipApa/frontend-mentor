@@ -92,13 +92,13 @@ table {
 	background-color: var(--veryPaleOrange);
 }
 
-.chart-section div:first-child {
+.chart-section .balance {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.chart-section div:nth-child(2) {
+.chart-section .chart {
 	display: flex;
 	justify-content: space-between;
 }
