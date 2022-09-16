@@ -13,7 +13,6 @@ async function getData() {
 
     const maxBalanceAmount = Math.max(...balance);
     const chartBarMaxHeight = 150;
-    const html = '';
 
     for(let value in dailyBalanceRes[0]) {
         let precentOfMaxVal = Math.ceil( dailyBalanceRes[0][value].amount / maxBalanceAmount * 100 );
@@ -34,10 +33,26 @@ async function getData() {
             <span class="tooltip" role="tooltip">$${dailyBalanceRes[0][value].amount}</span>
             ${chartHtml}
             <span class="day">${dailyBalanceRes[0][value].day}</span>
+
         </div>
         `        
         chart.innerHTML += barHtml;
     }
+    return;
 }
 
-getData();
+getData().then(() => {
+    const chartElements = document.getElementsByClassName('chart-element');
+    console.log(chartElements)
+    for (let element of chartElements) {
+        element.addEventListener('mouseover', () => {
+            console.log('click')
+            element.classList.add('show')
+        });
+
+        element.addEventListener('mouseout', () => {
+            console.log('click')
+            element.classList.remove('show')
+        });
+    }
+}).catch(err => console.log(err)); 
