@@ -30,11 +30,11 @@ async function getData() {
         let chartHtml = `<div style="height:${dailyBalanceRes[0][value].barHeight}px; background-color:${dailyBalanceRes[0][value].backColor}" class="chart-bar"></div>`
 
         let barHtml = `
-            <div class="chart-element">
-              <span role="tooltip">$${dailyBalanceRes[0][value].amount}</span>
-              ${chartHtml}
-              <span class="day">${dailyBalanceRes[0][value].day}</span>
-            </div>
+        <div class="chart-element">
+            <span class="tooltip" role="tooltip">$${dailyBalanceRes[0][value].amount}</span>
+            ${chartHtml}
+            <span class="day">${dailyBalanceRes[0][value].day}</span>
+        </div>
         `        
         chart.innerHTML += barHtml;
     }
