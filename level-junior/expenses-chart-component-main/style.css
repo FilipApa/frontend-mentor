@@ -38,18 +38,25 @@ body {
 	background-color: var(--cream);
 	font-family: 'DM Sans', sans-serif;
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -63,7 +70,7 @@ table {
 	max-width: 375px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 10vh 15px;
+	padding: 0 15px;
 }
 
 .balance-section {
@@ -131,7 +138,8 @@ table {
     border-radius: 2px;
     color: #fff;
     font-size: 13px;
-	position: relative;
+	text-align: center;
+	position: absolute;
 	left: 0;
 	right: 0;
     top: -6px;
@@ -187,4 +195,69 @@ table {
 	font-weight: 700;
 	text-align: end;
 	margin-bottom: 2px;
+}
+
+@media (min-width: 555px) {
+	.container {
+		max-width: 565px;
+	}
+
+	.balance-section {
+		margin-bottom: 20px;
+		padding: 23px 38px;
+	}
+
+	.balance-section h1 {
+		margin-bottom: 17px;
+		font-size: 16px;
+	}
+
+	.balance-section span {
+		font-size: 32px;
+	}
+
+	.chart-section {
+		padding: 34px 38px;
+	}
+
+	.chart-section .chart-wrapper {
+		margin-bottom: 45px;
+	}
+	
+	.chart-section .chart {
+		padding-bottom: 40px;
+	}
+
+	.chart-section h2 {
+		font-size: 32px;
+		margin-bottom: 60px;
+	}
+
+	.chart-section .balance-total span {
+		font-size: 50px;
+	}
+
+	.chart-section .chart-element {
+		width: 70px;
+	}
+
+	.chart-section .tooltip {
+		font-size: 15px;
+		top: -35px;
+	}
+	
+	.chart-section .chart-bar  {
+		max-width: 50px;
+		width: 100%;
+	}
+
+	.chart-section .balance-total h3,
+	.chart-section .balance-precent h4 {
+		font-size: 18px;
+	}
+
+	.chart-section .balance-precent span {
+		margin-bottom: 15px;
+	}
+
 }
