@@ -35,6 +35,10 @@ body {
     font-family: 'Epilogue', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 ol, ul {
     list-style: none;
 }

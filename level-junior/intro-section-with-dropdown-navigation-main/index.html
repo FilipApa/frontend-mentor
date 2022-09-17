@@ -19,25 +19,99 @@
       snap
     </div>
 
-    <nav>
-      
+    <nav class="nabvar">
+      <button class="nabvar-toggle" id="nabvar-toggle">
+        <svg xmlns="./images/icon-menu.svg"></svg>
+      </button>
+      <ul class="navbar-wraper">
+        <li class="nav-item nav-dropdown">
+          <a class="nav-link" href="#">Features <svg xmlns="./images/icon-arrow-down.svg"></svg></a>
+          <ul>
+            <li class="nav-item">
+              <svg xmlns="./images/icon-todo.svg"></svg>
+              <a class="nav-link" href="#">Todo List</a>
+            </li>
+            <li class="nav-item">
+              <svg xmlns="./images/icon-calendar.svg"></svg>
+              <a class="nav-link" href="#">Calendar</a>             
+            </li>
+            <li class="nav-item">
+              <svg xmlns="./images/icon-reminders.svg"></svg>
+              <a class="nav-link" href="#">Reminders</a>              
+            </li>
+            <li class="nav-item">
+              <svg xmlns="./images/icon-planning.svg"></svg>
+              <a class="nav-link" href="#"> Planning</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Company <svg xmlns="./images/icon-arrow-down.svg"></svg></a>
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Careers</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Register</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
-  Features
-  Company
-  Careers
-  About
+  <main class="container">
 
-  Login
-  Register
+      <section>
+        <div class="banner" role="banner"></div>  
 
-  Make remote work
+        <div>
+          <div class="banner-text-wrapper">
+            <h1> Make remote work</h1>
+            <p>
+              Get your team in sync, no matter your location. Streamline processes, 
+              create team rituals, and watch productivity soar.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+         
+          <div class="clients-wrapper">
+            <svg xmlns="../images/client-databiz.svg"></svg>
+            <svg xmlns="./images/client-audiophile.svg"></svg>
+            <svg xmlns="./images/client-meet.svg"></svg>
+            <svg xmlns="./images/client-maker.svg"></svg>  
+          </div>
+        </div>
+      </section>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+  </main>
 
-  Learn more
+ 
+
+ 
+
+  
   
   <script src="index.js"></script>
 </body>
