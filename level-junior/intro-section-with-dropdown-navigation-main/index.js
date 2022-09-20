@@ -9,6 +9,15 @@ function showDropdown(target) {
 
 navbarToggleBtn.addEventListener('click', function(e) {
     showDropdown('#nabvar-toggle');
+    const icon = this.querySelector('img');
+
+    if(icon.alt === 'icon for hamburger menu') {
+        icon.src = './images/icon-close-menu.svg';
+        icon.alt = 'icon for close menu';
+    } else {
+        icon.src = './images/icon-menu.svg';
+        icon.alt = 'icon for hamburger menu'
+    }
 });
 
 navLinkFeatures.addEventListener('click', function(e) {
