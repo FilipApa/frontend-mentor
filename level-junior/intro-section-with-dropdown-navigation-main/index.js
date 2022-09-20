@@ -7,14 +7,14 @@ function showDropdown(target) {
     targetElement.classList.toggle('show');
 };
 
+navbarToggleBtn.addEventListener('click', function(e) {
+    showDropdown('#nabvar-toggle');
+});
+
 navLinkFeatures.addEventListener('click', function(e) {
     showDropdown('#nav-link-features');
 });
 
 navLinkCompany.addEventListener('click', function(e) {
     showDropdown('#nav-link-company');
-});
-
-navbarToggleBtn.addEventListener('click', function(e) {
-    showDropdown('#nabvar-toggle');
 });

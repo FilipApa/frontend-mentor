@@ -72,13 +72,40 @@ header .navbar-wrapper {
     display: flex;
 }
 
+header {
+    justify-content: space-between;
+    align-items: center;
+}
+
 header #nabvar-toggle + ul,
 header #nav-link-features + ul,
 header #nav-link-company + ul {
     display: none;
 }
+
 header #nabvar-toggle + ul.show,
 header #nav-link-features + ul.show,
 header #nav-link-company + ul.show {
     display: block;
+}
+
+header #nabvar-toggle {
+   z-index: 10;
+}
+
+header #nabvar-toggle + ul {
+    position: fixed;
+    top: 0;
+    right: -240px;
+    bottom: 0;
+    width: 0;
+}
+
+header #nabvar-toggle + ul.show {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    background-color: blue;
 }
