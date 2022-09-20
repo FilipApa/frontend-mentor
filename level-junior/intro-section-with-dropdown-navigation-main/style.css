@@ -75,6 +75,18 @@ header .navbar-wrapper {
 header {
     justify-content: space-between;
     align-items: center;
+    height: 70px;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+/*FOR NAVIGATION DROPDOWN*/
+header #nabvar-toggle {
+    z-index: 10;
 }
 
 header #nabvar-toggle + ul,
@@ -89,16 +101,13 @@ header #nav-link-company + ul.show {
     display: block;
 }
 
-header #nabvar-toggle {
-   z-index: 10;
-}
-
 header #nabvar-toggle + ul {
     position: fixed;
     top: 0;
     right: -240px;
     bottom: 0;
-    width: 0;
+    padding: 82px 25px;
+    width: 0;   
 }
 
 header #nabvar-toggle + ul.show {
@@ -107,5 +116,29 @@ header #nabvar-toggle + ul.show {
     right: 0;
     bottom: 0;
     width: 240px;
-    background-color: blue;
+    background-color: #f5f5f5;
+}
+
+header #nav-link-features + ul.show,
+header #nav-link-company + ul.show {
+    margin: 30px 0 30px 15px;
+}
+
+header #nav-link-features + ul.show .nav-item,
+header #nav-link-company + ul.show .nav-item{
+    display: flex;
+    align-items: center;
+}
+
+header .nav-item {
+    margin-bottom: 27px;
+}
+
+header .nav-item .nav-link{
+    color: var(--almostBlack);
+}
+
+header .nav-item img{
+    margin-left: 11px;
+    width: 20px;
 }
