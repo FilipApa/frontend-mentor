@@ -66,25 +66,7 @@ table {
     box-sizing: border-box;
 }
 
-header, 
-header .navbar,
-header .navbar-wrapper {
-    display: flex;
-}
-
-header {
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    padding: 0 20px;
-}
-
-header .logo {
-    font-size: 35px;
-    font-weight: 700;
-}
-
-/*FOR NAVIGATION DROPDOWN*/
+/*FOR NAVIGATION DROPDOWN FUNCTIONALITY*/
 header #nabvar-toggle {
     z-index: 10;
 }
@@ -130,8 +112,34 @@ header #nav-link-company + ul.show .nav-item{
     align-items: center;
 }
 
+header #nav-link-features + ul.show img,
+header #nav-link-company + ul.show img{
+   margin-left: 0;
+   margin-right: 20px;
+   width: 20px;
+}
+
+header, 
+header .navbar,
+header .navbar-wrapper {
+    display: flex;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 35px;
+    font-weight: 700;
+}
+
 header .nav-item {
     margin-bottom: 27px;
+    cursor: pointerS;
 }
 
 header .nav-item .nav-link{
@@ -140,5 +148,10 @@ header .nav-item .nav-link{
 
 header .nav-item img{
     margin-left: 11px;
-    width: 20px;
+}
+
+header .nav-registration-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
