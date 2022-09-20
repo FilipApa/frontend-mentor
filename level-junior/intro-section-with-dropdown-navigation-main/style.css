@@ -62,7 +62,23 @@ table {
     border-spacing: 0;
 }
 
-
 * {
     box-sizing: border-box;
+}
+
+header, 
+header .navbar,
+header .navbar-wrapper {
+    display: flex;
+}
+
+header #nabvar-toggle + ul,
+header #nav-link-features + ul,
+header #nav-link-company + ul {
+    display: none;
+}
+header #nabvar-toggle + ul.show,
+header #nav-link-features + ul.show,
+header #nav-link-company + ul.show {
+    display: block;
 }
