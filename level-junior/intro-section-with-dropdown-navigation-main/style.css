@@ -201,3 +201,14 @@ header .nav-registration-wrapper .register{
     padding: 15px 25px;
     border-radius: 18px;
 }
+
+/*CLIENTS*/
+.clients-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.clients-wrapper img {
+    width: 65px;
+    margin: 0 15px;
+}
