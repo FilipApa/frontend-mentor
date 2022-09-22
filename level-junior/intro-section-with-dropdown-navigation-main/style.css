@@ -37,6 +37,22 @@ body {
     position: relative;
 }
 
+.mobile-nav-wrap {
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--almostBlack);
+    opacity: 0.5;
+}
+
+.mobile-nav-wrap.dark {
+    visibility: visible;
+}
+
 a {
     text-decoration: none;
 }
@@ -102,7 +118,7 @@ header .nav-registration-wrapper {
 
 /*NAVIGATION DROPDOWN FUNCTIONALITY*/
 header #nabvar-toggle {
-    z-index: 10;
+    z-index: 30;
     cursor: pointer;
     visibility: visible;
 }
@@ -112,9 +128,10 @@ header #nabvar-toggle + ul {
     top: 0;
     right: -240px;
     bottom: 0;
-    padding: 82px 25px;
-    height: initial;
-    width: 0;   
+    padding: 80px 25px;
+    width: 0; 
+    height: initial;  
+    z-index: 20;
     transition: all 0.2s linear;
 }
 

@@ -18,6 +18,7 @@ navbarToggleBtn.addEventListener('click', function(e) {
         icon.src = './images/icon-menu.svg';
         icon.alt = 'icon for hamburger menu'
     }
+    document.querySelector('.mobile-nav-wrap').classList.toggle('dark');
 });
 
 navLinkFeatures.addEventListener('click', function(e) {
