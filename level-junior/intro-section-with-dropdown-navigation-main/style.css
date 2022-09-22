@@ -107,6 +107,22 @@ header #nabvar-toggle {
     visibility: visible;
 }
 
+header #nabvar-toggle + ul {
+    position: fixed;
+    top: 0;
+    right: -240px;
+    bottom: 0;
+    padding: 82px 25px;
+    height: initial;
+    width: 0;   
+    transition: all 0.2s linear;
+}
+
+header #nabvar-toggle + ul.show {
+    right: 0;
+    width: 240px;
+}
+
 header .nav-dropdown {
     position: relative;
 }
@@ -124,6 +140,18 @@ header #nav-link-company + ul {
     top: 10px;
     left: 20px;
     height: 0;
+    transition: height 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+header #nabvar-toggle + ul.show,
+header #nav-link-features + ul.show,
+header #nav-link-company + ul.show {
+    visibility: visible;
+}
+
+header #nav-link-features + ul.show,
+header #nav-link-company + ul.show {
+    height: fit-content;
 }
 
 header #nav-link-features + ul .nav-item,
@@ -139,32 +167,9 @@ header #nav-link-company + ul img{
    width: 18px;
 }
 
-header #nabvar-toggle + ul.show,
-header #nav-link-features + ul.show,
-header #nav-link-company + ul.show {
-    visibility: visible;
-}
 
-header #nav-link-features + ul.show,
-header #nav-link-company + ul.show {
-    height: fit-content;
-}
 
-header #nabvar-toggle + ul {
-    position: fixed;
-    top: 0;
-    right: -240px;
-    bottom: 0;
-    padding: 82px 25px;
-    height: initial;
-    width: 0;   
-    transition: all 0.2s linear;
-}
 
-header #nabvar-toggle + ul.show {
-    right: 0;
-    width: 240px;
-}
 
 header .nav-registration-wrapper .register{
     border: 1px solid var(--almostBlack);
