@@ -34,6 +34,7 @@ body {
     line-height: 1;
     font-family: 'Epilogue', sans-serif;
     background-color: var(--almostWhite);
+    position: relative;
 }
 
 a {
@@ -99,7 +100,7 @@ header .nav-registration-wrapper {
     align-items: center;
 }
 
-/*SNAVIGATION DROPDOWN FUNCTIONALITY*/
+/*NAVIGATION DROPDOWN FUNCTIONALITY*/
 header #nabvar-toggle {
     z-index: 10;
     cursor: pointer;
@@ -110,18 +111,19 @@ header .nav-dropdown {
     position: relative;
 }
 
-
 header #nabvar-toggle + ul,
 header #nav-link-features + ul,
 header #nav-link-company + ul {
     visibility: hidden;
+    background-color: var(--almostWhite);
 }
 
 header #nav-link-features + ul,
 header #nav-link-company + ul {
     position: relative;
+    top: 10px;
+    left: 20px;
     height: 0;
-    transition: all 0.2s linear;
 }
 
 header #nav-link-features + ul .nav-item,
@@ -141,6 +143,10 @@ header #nabvar-toggle + ul.show,
 header #nav-link-features + ul.show,
 header #nav-link-company + ul.show {
     visibility: visible;
+}
+
+header #nav-link-features + ul.show,
+header #nav-link-company + ul.show {
     height: fit-content;
 }
 
@@ -150,17 +156,14 @@ header #nabvar-toggle + ul {
     right: -240px;
     bottom: 0;
     padding: 82px 25px;
+    height: initial;
     width: 0;   
     transition: all 0.2s linear;
 }
 
 header #nabvar-toggle + ul.show {
-    position: fixed;
-    top: 0;
     right: 0;
-    bottom: 0;
     width: 240px;
-    background-color: #f5f5f5;
 }
 
 header .nav-registration-wrapper .register{
@@ -274,19 +277,6 @@ header .nav-registration-wrapper .register{
         color: var(--almostBlack);
     }
 
-    header .nav-item ul {
-        width: max-content;
-        justify-content: flex-start;
-        background-color: #fff;
-        position: absolute;
-        top: 70px;
-        padding: 24px;
-        border-radius: 10px;
-        padding: 24px;
-        -webkit-box-shadow: 0px 10px 35px 0px var(--mediumGray);
-        -moz-box-shadow: 0px 10px 35px 0px var(--mediumGray);
-        box-shadow: 0px 10px 35px 0px var(--mediumGray);
-    }
     header .nav-item img {
         margin-left: 0;
     }
@@ -305,6 +295,21 @@ header .nav-registration-wrapper .register{
         margin: 0;
     }
 
+    header #nav-link-features + ul, 
+    header #nav-link-company + ul {
+        width: max-content;
+        justify-content: flex-start;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        padding: 24px;
+        border-radius: 10px;
+        padding: 24px;
+        -webkit-box-shadow: 0px 10px 35px 0px var(--mediumGray);
+        -moz-box-shadow: 0px 10px 35px 0px var(--mediumGray);
+        box-shadow: 0px 10px 35px 0px var(--mediumGray);
+    }
+
     header #nav-link-features + ul .nav-item, 
     header #nav-link-company + ul .nav-item {
         justify-content: flex-start;
@@ -313,6 +318,7 @@ header .nav-registration-wrapper .register{
 
     header #nav-link-features + ul {
         right: 10px;
+        left: unset;
     }
     header #nav-link-company + ul {
         left: 0;
