@@ -69,8 +69,7 @@ table {
 
 /*NAVIGATION*/
 header, 
-header .navbar,
-header .navbar-wrapper {
+header .navbar {
     display: flex;
 }
 
@@ -107,6 +106,11 @@ header #nabvar-toggle {
     visibility: visible;
 }
 
+header .nav-dropdown {
+    position: relative;
+}
+
+
 header #nabvar-toggle + ul,
 header #nav-link-features + ul,
 header #nav-link-company + ul {
@@ -115,7 +119,9 @@ header #nav-link-company + ul {
 
 header #nav-link-features + ul,
 header #nav-link-company + ul {
-    margin: 30px 0 30px 25px;
+    position: relative;
+    height: 0;
+    transition: all 0.2s linear;
 }
 
 header #nav-link-features + ul .nav-item,
@@ -135,6 +141,7 @@ header #nabvar-toggle + ul.show,
 header #nav-link-features + ul.show,
 header #nav-link-company + ul.show {
     visibility: visible;
+    height: fit-content;
 }
 
 header #nabvar-toggle + ul {
@@ -144,6 +151,7 @@ header #nabvar-toggle + ul {
     bottom: 0;
     padding: 82px 25px;
     width: 0;   
+    transition: all 0.2s linear;
 }
 
 header #nabvar-toggle + ul.show {
@@ -233,6 +241,11 @@ header .nav-registration-wrapper .register{
         height: 100%;
     }
 
+    header .navbar-wrapper {
+        display: flex;
+    }
+
+    /*NAVIGATION*/
     header #nabvar-toggle {
         visibility: hidden;
     }
@@ -249,16 +262,16 @@ header .nav-registration-wrapper .register{
         padding: 0;
     }
 
-    header .nav-dropdown {
-        position: relative;
-    }
-
     header .nav-item {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 0;
         margin-right: 30px;
+    }
+
+    header .nav-item:hover .nav-link {
+        color: var(--almostBlack);
     }
 
     header .nav-item ul {
@@ -302,7 +315,7 @@ header .nav-registration-wrapper .register{
         right: 10px;
     }
     header #nav-link-company + ul {
-       left: 0;
+        left: 0;
     }
     
     /*BANNER*/
@@ -313,7 +326,7 @@ header .nav-registration-wrapper .register{
     }
 
     .banner {
-        width: 40%;
+        width: 50%;
         height: inherit;
         background-image: url('./images/image-hero-desktop.png');
         background-position: unset;
