@@ -340,21 +340,21 @@ header .nav-registration-wrapper .register{
     header #nav-link-company + ul {
         left: 0;
     }
-    
+
     /*BANNER*/
     .banner-section {
         display: flex;
         flex-direction: row-reverse;
         height:calc(100vh - 255px);
     }
-
+    
     .banner {
         width: 42.5%;
         height: inherit;
         background-image: url('./images/image-hero-desktop.png');
         background-position: unset;
     }
-
+    
     .banner-second-part {
         width: 57.5%;
         display: flex;
@@ -373,19 +373,7 @@ header .nav-registration-wrapper .register{
     }
 
     .banner-text-wrapper h1{
-        font-size: 80px;
-    }
-
-    .banner-text-wrapper p{
-        font-size: 20px;
-        font-weight: 700;
-        margin-top: 40px;
-        margin-bottom: 80px;
-        line-height: 1.4;
-    }
-
-    .banner-text-wrapper a {
-        padding: 20px 36px;
+        font-size: 45px;
     }
 
     .clients-wrapper {
@@ -396,7 +384,34 @@ header .nav-registration-wrapper .register{
         display: flex;
         justify-content: space-evenly;
     }
+}
 
+@media screen and (min-width: 1440px) {    
+    .banner-text-wrapper h1{
+        font-size: 80px;
+    }
+    
+    .banner-text-wrapper p{
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        line-height: 1.4;
+    }
+    
+    .banner-text-wrapper a {
+        padding: 20px 36px;
+    }
+    
+    .clients-wrapper {
+        max-width: 575px;
+        width: 100%;
+        margin: 0;
+        margin-top: auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
     .clients-wrapper img{
         width: 90px;
     }
