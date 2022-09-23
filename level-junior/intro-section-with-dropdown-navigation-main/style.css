@@ -348,7 +348,7 @@ header .nav-registration-wrapper .register{
     .banner-section {
         display: flex;
         flex-direction: row-reverse;
-        height:calc(100vh - 10vh);
+        height:calc(100vh - 20vh);
     }
     
     .banner {
