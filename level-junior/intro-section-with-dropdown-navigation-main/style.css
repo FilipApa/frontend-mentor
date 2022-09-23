@@ -197,7 +197,7 @@ header .nav-registration-wrapper ul .register{
 }
 
 .banner-section {
-    height: 100vh;
+    height: var(100vh - 75px);
 }
 
 .banner-text-wrapper {
