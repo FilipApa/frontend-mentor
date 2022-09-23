@@ -196,6 +196,10 @@ header .nav-registration-wrapper .register{
     height: 280px;
 }
 
+.banner-section {
+    height: 100vh;
+}
+
 .banner-text-wrapper {
     text-align: center;
     padding: 55px 20px 60px 20px;
@@ -368,7 +372,7 @@ header .nav-registration-wrapper .register{
         width: 100%;
         padding: 0;
         padding-left: 40px;
-        transform: translateY(30%);
+        transform: translateY(10vh);
     }
 
     .banner-text-wrapper h1{
