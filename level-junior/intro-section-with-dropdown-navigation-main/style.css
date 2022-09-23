@@ -11,7 +11,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol, .dropdown, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -61,7 +61,7 @@ button{
     all: unset;
 }
 
-ol, ul {
+ol, .dropdown {
     list-style: none;
 }
 
@@ -123,7 +123,7 @@ header #nabvar-toggle {
     visibility: visible;
 }
 
-header #nabvar-toggle + ul {
+header #nabvar-toggle + .dropdown {
     position: fixed;
     top: 0;
     right: -240px;
@@ -135,45 +135,45 @@ header #nabvar-toggle + ul {
     transition: all 0.2s linear;
 }
 
-header #nabvar-toggle + ul.show {
+header #nabvar-toggle + .dropdown.show {
     right: 0;
     width: 240px;
 }
 
-header #nabvar-toggle + ul,
-header #nav-link-features + ul,
-header #nav-link-company + ul {
+header #nabvar-toggle + .dropdown,
+header #nav-link-features + .dropdown,
+header #nav-link-company + .dropdown {
     visibility: hidden;
     background-color: var(--almostWhite);
 }
 
-header #nav-link-features + ul,
-header #nav-link-company + ul {
+header #nav-link-features + .dropdown,
+header #nav-link-company + .dropdown {
     position: relative;
     top: 10px;
     left: 20px;
     height: 0;
 }
 
-header #nabvar-toggle + ul.show,
-header #nav-link-features + ul.show,
-header #nav-link-company + ul.show {
+header #nabvar-toggle + .dropdown.show,
+header #nav-link-features + .dropdown.show,
+header #nav-link-company + .dropdown.show {
     visibility: visible;
 }
 
-header #nav-link-features + ul.show,
-header #nav-link-company + ul.show {
+header #nav-link-features + .dropdown.show,
+header #nav-link-company + .dropdown.show {
     height: fit-content;
 }
 
-header #nav-link-features + ul .nav-item,
-header #nav-link-company + ul .nav-item{
+header #nav-link-features + .dropdown .nav-item,
+header #nav-link-company + .dropdown .nav-item{
     display: flex;
     align-items: center;
 }
 
-header #nav-link-features + ul img,
-header #nav-link-company + ul img{
+header #nav-link-features + .dropdown img,
+header #nav-link-company + .dropdown img{
    margin-left: 0;
    margin-right: 20px;
    width: 18px;
@@ -269,7 +269,7 @@ header .nav-registration-wrapper .register{
         visibility: hidden;
     }
 
-    header #nabvar-toggle + ul {
+    header #nabvar-toggle + .dropdown {
         width: 100%;
         height: 100%;
         visibility: visible;
@@ -310,13 +310,13 @@ header .nav-registration-wrapper .register{
         padding: 14px;
     }
 
-    header #nav-link-features + ul, 
-    header #nav-link-company + ul {
+    header #nav-link-features + .dropdown, 
+    header #nav-link-company + .dropdown {
         margin: 0;
     }
 
-    header #nav-link-features + ul, 
-    header #nav-link-company + ul {
+    header #nav-link-features + .dropdown, 
+    header #nav-link-company + .dropdown {
         width: max-content;
         justify-content: flex-start;
         background-color: #fff;
@@ -330,17 +330,17 @@ header .nav-registration-wrapper .register{
         box-shadow: 0px 10px 35px 0px var(--mediumGray);
     }
 
-    header #nav-link-features + ul .nav-item, 
-    header #nav-link-company + ul .nav-item {
+    header #nav-link-features + .dropdown .nav-item, 
+    header #nav-link-company + .dropdown .nav-item {
         justify-content: flex-start;
         margin-bottom: 10px;
     }
 
-    header #nav-link-features + ul {
+    header #nav-link-features + .dropdown {
         right: 10px;
         left: unset;
     }
-    header #nav-link-company + ul {
+    header #nav-link-company + .dropdown {
         left: 0;
     }
 
