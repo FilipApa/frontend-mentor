@@ -375,6 +375,14 @@ header .nav-registration-wrapper .register{
         font-size: 45px;
     }
 
+    .banner-text-wrapper p {
+        margin-top: 30px;
+    }
+
+    .banner-text-wrapper a {
+        padding: 14px 25px;
+    }
+
     .clients-wrapper {
         max-width: 575px;
         width: 100%;
