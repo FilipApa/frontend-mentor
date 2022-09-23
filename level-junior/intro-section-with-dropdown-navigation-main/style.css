@@ -11,7 +11,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, li,
+dl, dt, dd,ul, ol, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -61,7 +61,7 @@ button{
     all: unset;
 }
 
-ol, .dropdown {
+li,ol, .dropdown {
     list-style: none;
 }
 
@@ -110,7 +110,7 @@ header .nav-item img{
     margin-left: 11px;
 }
 
-header .nav-registration-wrapper {
+header .nav-registration-wrapper ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,7 +179,7 @@ header #nav-link-company + ul img{
    width: 18px;
 }
 
-header .nav-registration-wrapper .register{
+header .nav-registration-wrapper ul .register{
     border: 1px solid var(--almostBlack);
     border-radius: 15px;
     width: 100%;
@@ -302,11 +302,17 @@ header .nav-registration-wrapper .register{
     }
 
     header .nav-registration-wrapper {
-        flex-direction: row;
         margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    header .nav-registration-wrapper .register {
+    header .nav-registration-wrapper ul{
+        flex-direction: row;
+    }
+
+    header .nav-registration-wrapper ul .register {
         padding: 14px;
     }
 
