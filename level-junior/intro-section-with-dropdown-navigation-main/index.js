@@ -3,7 +3,7 @@ const navLinkFeatures = document.getElementById('nav-link-features');
 const navLinkCompany = document.getElementById('nav-link-company');
 
 function showDropdown(target) {
-    let targetElement = document.querySelector(`${target} + .dropdown`);
+    let targetElement = document.querySelector(`${target} + ul`);
     targetElement.classList.toggle('show');
 };
 
