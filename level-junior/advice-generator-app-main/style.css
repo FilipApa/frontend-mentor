@@ -119,3 +119,14 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (min-width:100px) {
+    .advice-title {
+        font-size: 14px;
+    }
+    
+    .advice-content {
+        font-size: 27px;
+        line-height: 1.3;
+    }
+}
