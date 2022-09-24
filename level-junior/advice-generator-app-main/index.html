@@ -10,15 +10,19 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <header class="advice-title" id="advice-id"></header>
+    <header>
+      <h1 class="advice-title" id="advice-id"> Advice #117</h1>
+    </header>
     
     <main>
-      <p class="advice-content" id="advice"></p>
+      <blockquote class="advice-content" id="advice">
+        "It is easy to sit up and yake notice, what's difficult is getting up and taking action." 
+        </blockquote>
       <img
         srcset="./images/pattern-divider-mobile.svg 295w, ./images/pattern-divider-desktop.svg 444w"
         sizes="(max-width: 450px) 100%,
@@ -29,7 +33,7 @@
     </main>
 
     <footer>
-      <button id="advice-btn">
+      <button class="advice-btn" id="advice-btn">
         <img src="./images/icon-dice.svg" alt="Dice icon">
       </button>
     </footer>
