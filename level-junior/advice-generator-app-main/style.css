@@ -90,23 +90,28 @@ img {
     align-items: center;
     text-align: center;
     position: relative;
+    padding: 30px 24px;
 }
 
 .advice-title {
     text-transform: uppercase;
     color: var(--neonGreen);
     font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 12px;
 }
 
 .advice-content {
     color: var(--lightCyan);
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
 .advice-btn {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
+    bottom: -34px;
     padding: 20px;
     border-radius: 50%;
     background-color: var(--neonGreen);
