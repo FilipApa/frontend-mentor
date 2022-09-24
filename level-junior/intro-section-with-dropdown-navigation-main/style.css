@@ -197,7 +197,7 @@ header .nav-registration-wrapper ul .register{
 }
 
 .banner-section {
-    height: calc(100vh - 75px);
+    height: calc(100vh - 100px);
 }
 
 .banner-text-wrapper {
@@ -354,7 +354,7 @@ header .nav-registration-wrapper ul .register{
     .banner-section {
         display: flex;
         flex-direction: row-reverse;
-        height:calc(100vh - 20vh);
+        height:calc(100vh - 22vh);
     }
     
     .banner {
