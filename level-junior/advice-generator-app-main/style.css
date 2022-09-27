@@ -81,8 +81,7 @@ img {
 
 .container {
     max-width: 535px;
-    max-height: 300px;
-    height: 100%;
+    max-height: fit-content;
     border-radius: 10px;
     background-color: var(--darkGrayishBlue);
     display: flex;
@@ -100,6 +99,7 @@ img {
     font-weight: 400;
     letter-spacing: 3px;
     font-size: 12px;
+    margin-bottom: 40px;
 }
 
 .advice-content {
@@ -121,7 +121,11 @@ img {
     align-items: center;
 }
 
-@media screen and (min-width:100px) {
+footer {
+    padding: 20px 0;
+}
+
+@media screen and (min-width:1000px) {
     .advice-title {
         font-size: 14px;
     }
