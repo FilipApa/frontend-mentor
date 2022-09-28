@@ -197,12 +197,14 @@ header .nav-registration-wrapper ul .register{
 }
 
 .banner-section {
-    height: 100vh;
+    height: calc(100vh - 100px);
+  
 }
 
 .banner-text-wrapper {
     text-align: center;
     padding: 40px 20px ;
+    margin-bottom: 20px;
 }
 
 .banner-text-wrapper h1{
