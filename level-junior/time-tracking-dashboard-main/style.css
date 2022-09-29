@@ -92,6 +92,10 @@ body {
     margin: 0 auto;
 }
 
+header {
+    position: relative;
+}
+
 header .avatar-wrapper {
     background-color: var(--blue);
     border-radius: 2rem;
@@ -130,11 +134,26 @@ header .avatar-info .avatar-name {
 }
 
 header .tab-wrapper {
+    width: 100%;
+    min-height: 10rem;
     background-color: var(--darkBlue);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    padding: 2rem;
+    padding: 1rem 0 0 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: absolute;
+    bottom: -8.5rem;
+    z-index: -20;
+}
+
+header .tab-wrapper button{
+    color: var(--desaturatedBlue);
+    font-size: 1.6rem;
+    transition: all .2s ease-in;
+}
+
+header .tab-wrapper button:hover {
+    color: var(--paleBlue);
 }
