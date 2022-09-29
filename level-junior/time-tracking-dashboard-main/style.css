@@ -34,6 +34,8 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+*::after,
+*::before,
 * {
     box-sizing: border-box;
 }
@@ -92,9 +94,6 @@ body {
     margin: 0 auto;
 }
 
-header {
-    position: relative;
-}
 
 header .avatar-wrapper {
     background-color: var(--blue);
@@ -125,26 +124,34 @@ header .avatar-info h1 {
     flex-direction: column;
     font-size: 1.3rem;
     font-weight: 300;
+    color: var(--paleBlue);
 }
 
 header .avatar-info .avatar-name {
     font-size: 2rem;
-    font-weight: 400;
     margin-top: 0.5rem;
+    color: #fff;
 }
 
 header .tab-wrapper {
-    width: 100%;
-    min-height: 10rem;
     background-color: var(--darkBlue);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    padding: 1rem 0 0 0;
+    padding: 2rem 0 ;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+}
+
+header .tab-wrapper::before {
+    content: '';
+    width: 100%;
+    height: 2rem;
+    background-color: var(--darkBlue);
+    top: -2rem;
     position: absolute;
-    bottom: -8.5rem;
+    z-index: -20;
 }
 
 header .tab-wrapper button{
@@ -157,6 +164,56 @@ header .tab-wrapper button:hover {
     color: var(--paleBlue);
 }
 
-main {
-    margin-top: 10rem;
+
+.time-tracking {
+    margin:2rem 0;
+    position: relative;
 }
+
+.time-tracking .time-tracking-top {
+    height: 5rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.time-tracking .time-tracking-bottom {
+    width: 100%;
+    background-color: var(--darkBlue);
+    border-radius: 2rem;
+    padding: 3rem 0;
+    position: relative;
+    color: #fff;
+}
+
+.time-tracking .time-tracking-bottom::before {
+    content: '';
+    width: 100%;
+    height: 2rem;
+    background-color: var(--darkBlue);
+    position: absolute;
+    top: 0;
+    z-index: -20;
+}
+
+.time-tracking .time-tracking-title,
+.time-tracking .time-tracking-hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-tracking .time-tracking-title {
+    font-weight: 500;
+}
+
+.time-tracking .time-tracking-title img {
+    width: 2rem;
+}
+
+.time-tracking .time-tracking-hours .previous-hours {
+    color: var(--desaturatedBlue);
+}
+
+

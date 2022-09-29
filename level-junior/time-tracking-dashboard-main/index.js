@@ -1,4 +1,3 @@
-//colors
 const mainSection = document.getElementById('main');
 const dailyBtn = document.getElementById('tab-daily');
 const weeklyBtn = document.getElementById('tab-weekly');
@@ -48,8 +47,7 @@ function makeTrackingHtml(data, time) {
         console.log(key)
         let html = `
         <section class="time-tracking">
-            <div class="time-tracking-top" style="background-color:${key.timeTrackingTop.color}">
-                <img src="${key.timeTrackingTop.iconUrl}" alt="${key.title} icon">
+            <div class="time-tracking-top" style="background-color:${key.timeTrackingTop.color}; background-image:url(${key.timeTrackingTop.iconUrl})">
             </div>
             
             <div class="time-tracking-bottom">
@@ -60,7 +58,7 @@ function makeTrackingHtml(data, time) {
 
                 <div class="time-tracking-hours">
                     <span class="current-hours">${key.current}hrs</span>
-                    <span class="previus-hours">Last ${time} - ${key.previous}</span>
+                    <span class="previous-hours">Last ${time} - ${key.previous}</span>
 
                 </div>
             </div>
