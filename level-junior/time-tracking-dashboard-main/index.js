@@ -51,7 +51,6 @@ function makeTrackingHtml(data, time) {
     mainSection.innerHTML = ''
 
     for (let key of data) {
-        console.log(key)
         let html = `
         <section class="time-tracking">
             <div class="time-tracking-top" style="background-color:${key.timeTrackingTop.color}; background-image:url(${key.timeTrackingTop.iconUrl})">
@@ -73,6 +72,8 @@ function makeTrackingHtml(data, time) {
     `
     mainSection.insertAdjacentHTML('beforeend', html);
     }
+
+    dailyBtn.classList.add('active');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
         makeTrackingHtml(day, "Day");
         dailyBtn.addEventListener('click', function() {
             makeTrackingHtml(day, "Day");
-            btns.forEach(btn => {
+            [...btns].forEach(btn => {
                 removeActiveClass(btn)
             });
 
@@ -115,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         weeklyBtn.addEventListener('click', function() {
             makeTrackingHtml(week, "Week");
 
-            btns.forEach(btn => {
+            [...btns].forEach(btn => {
                 removeActiveClass(btn)
             });
 
@@ -125,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         mounthlyBtn.addEventListener('click', function() {
             makeTrackingHtml(mounth, "Mounth");
 
-            btns.forEach(btn => {
+            [...btns].forEach(btn => {
                 removeActiveClass(btn)
             });
 
