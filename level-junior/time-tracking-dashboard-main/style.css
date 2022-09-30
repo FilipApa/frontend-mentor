@@ -137,7 +137,7 @@ header .tab-wrapper {
     background-color: var(--darkBlue);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-    padding: 2rem 0 ;
+    padding: 2rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -150,6 +150,7 @@ header .tab-wrapper::before {
     height: 2rem;
     background-color: var(--darkBlue);
     top: -2rem;
+    right: 0;
     position: absolute;
     z-index: -20;
 }
@@ -164,9 +165,13 @@ header .tab-wrapper button:hover {
     color: var(--paleBlue);
 }
 
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+}
 
 .time-tracking {
-    margin:2rem 0;
+    margin: 2rem 0;
     position: relative;
 }
 
@@ -193,6 +198,7 @@ header .tab-wrapper button:hover {
     height: 2rem;
     background-color: var(--darkBlue);
     position: absolute;
+    right: 0;
     top: 0;
     z-index: -20;
 }
@@ -202,18 +208,120 @@ header .tab-wrapper button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .time-tracking .time-tracking-title {
     font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 .time-tracking .time-tracking-title img {
     width: 2rem;
+    cursor: pointer;
+}
+
+.time-tracking .time-tracking-hours .current-hours {
+    font-size: 2.8rem;
+    font-weight: 300;
+
 }
 
 .time-tracking .time-tracking-hours .previous-hours {
     color: var(--desaturatedBlue);
+    font-size: 1.5rem;
 }
 
+@media screen and (min-width:640px) {
+    .container  {
+        width: 60%;
+    }
 
+    .time-tracking .time-tracking-title,
+    .time-tracking .time-tracking-hours {
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container  {
+        width: 75%;
+        flex-direction: row;
+    }
+
+    header{
+        align-self: stretch;
+        margin-top: 0;
+        width: 24.5%;
+        margin-right: .5%;
+    }
+
+    header .avatar-wrapper,
+    header .tab-wrapper,
+    .time-tracking .time-tracking-hours  {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .avatar-wrapper {
+        margin-top: 1rem;
+        height: 59%;
+    }
+
+    header .avatar {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    header .avatar-info h1 {
+        font-size: 1.5rem;
+    }
+
+    header .avatar-info .avatar-name {
+        font-size: 3rem;
+    }
+    header .tab-wrapper {
+        height: 38%;
+    }
+
+    header .tab-wrapper button {
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+    }
+
+    main {
+        width: 74.5%;
+        margin-left: .5%;
+        height: 100%;
+    }
+
+    .main-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .time-tracking {
+        width: 31%;
+        margin: 1.1%;
+    }
+
+    .time-tracking .time-tracking-bottom {
+        padding: 2rem 0 4rem 2rem;
+    }
+
+    .time-tracking .time-tracking-title {
+        margin-bottom: 2rem;
+    }
+
+    .time-tracking .time-tracking-hours .current-hours {
+        font-size: 4.8rem;
+        margin-bottom: 1.5rem;
+    }
+}

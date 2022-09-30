@@ -21,7 +21,7 @@ const timeTrackingTop = [
         "iconUrl": './images/icon-exercise.svg'
     },
     {
-        "color": 'hsl(15, 100%, 70%)',
+        "color": 'hsl(264, 64%, 52%)',
         "iconUrl": './images/icon-social.svg'
     },
     {
@@ -57,8 +57,8 @@ function makeTrackingHtml(data, time) {
                 </div>
 
                 <div class="time-tracking-hours">
-                    <span class="current-hours">${key.current}hrs</span>
-                    <span class="previous-hours">Last ${time} - ${key.previous}</span>
+                    <span class="current-hours">${key.current} ${key.current <= 1 ? key.current === 0 ? '' : 'hr' : 'hrs'}</span>
+                    <span class="previous-hours">Last ${time} - ${key.previous} ${key.previous <= 1 ? key.previous === 0 ? '' : 'hr' : 'hrs'}</span>
 
                 </div>
             </div>
