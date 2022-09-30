@@ -2,6 +2,7 @@ const mainSection = document.getElementById('main');
 const dailyBtn = document.getElementById('tab-daily');
 const weeklyBtn = document.getElementById('tab-weekly');
 const mounthlyBtn = document.getElementById('tab-mouthly');
+const btns = document.getElementsByClassName('btn');
 
 const timeTrackingTop = [
     {
@@ -40,6 +41,12 @@ async function fetchData() {
     return data;
 }
 
+function removeActiveClass( button) {
+    if(button.classList.contains('active')) {
+        button.classList.remove('active')
+    }
+}
+
 function makeTrackingHtml(data, time) {
     mainSection.innerHTML = ''
 
@@ -66,8 +73,6 @@ function makeTrackingHtml(data, time) {
     `
     mainSection.insertAdjacentHTML('beforeend', html);
     }
-   
-
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -98,21 +103,35 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }).then(() => {
         makeTrackingHtml(day, "Day");
-        dailyBtn.addEventListener('click', () => {
+        dailyBtn.addEventListener('click', function() {
             makeTrackingHtml(day, "Day");
+            btns.forEach(btn => {
+                removeActiveClass(btn)
+            });
+
+            this.classList.add('active');
         });
 
-        weeklyBtn.addEventListener('click', () => {
+        weeklyBtn.addEventListener('click', function() {
             makeTrackingHtml(week, "Week");
+
+            btns.forEach(btn => {
+                removeActiveClass(btn)
+            });
+
+            this.classList.add('active');
         });
 
-        mounthlyBtn.addEventListener('click', () => {
+        mounthlyBtn.addEventListener('click', function() {
             makeTrackingHtml(mounth, "Mounth");
+
+            btns.forEach(btn => {
+                removeActiveClass(btn)
+            });
+
+            this.classList.add('active');
         });
     }).catch(error => {
         console.log(error)
     })
 });
-
-
-console.log(mounth)
