@@ -75,15 +75,25 @@ main {
     width: 100%;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
     line-height: 1;
-    font-family: 'Space Mono', sans-serif;
-    background-color: none;
-    font-size: 2.4rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+    background-color: var(--lightGrayishCyan);
 }
 
 .container {
@@ -95,6 +105,35 @@ body {
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+
 header .logo {
     width: 10rem;
+}
+
+main {
+    background-color: var(--white);
+    height: calc(100vh - 14.2rem);
+    padding: 3rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element label {
+    color: var(--darkGrayishCyan);
+}
+
+.form-element input {
+    background-color: var(--veryLightGrayishCyan);
+    color: var(--darkGrayishCyan);
 }
