@@ -109,7 +109,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 header .logo {
@@ -118,10 +118,13 @@ header .logo {
 
 main {
     background-color: var(--white);
-    height: calc(100vh - 14.2rem);
-    padding: 3rem;
+    padding: 3.8rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
+}
+
+form {
+    margin-bottom: 4rem;
 }
 
 .form-element {
@@ -141,6 +144,14 @@ main {
     border-radius: .5rem;
     color: var(--veryDarkCyan);
     background-color: var(--veryLightGrayishCyan);
+}
+
+.form-element input::placeholder {
+    color: var(--veryDarkCyan);
+}
+
+.form-element input:focus {
+    outline: 2px solid var(--lightGrayishCyan);
 }
 
 .form-element label {
@@ -165,10 +176,6 @@ main {
     width: 100%;
 }
 
-.form-input input::placeholder {
-    color: var(--veryDarkCyan);
-}
-
 .form-btn-group {
     display: flex;
     flex-wrap: wrap;
@@ -188,4 +195,50 @@ main {
     align-items: center;
     background-color: var(--veryDarkCyan);
     color: var(--white);
+    transition: all .2s ease-in;
+}
+
+.form-btn-group button:hover {
+    background-color: var(--lightGrayishCyan);
+    color: var(--veryDarkCyan);
+}
+
+.tip-wrapper{
+    background-color: var(--veryDarkCyan);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.tip-result-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tip-result-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.tip-result-title span{
+    font-size: 1.4rem;
+    color: var(--grayishCyan);
+}
+
+.tip-result {
+    color: var(--lightGrayishCyan);
+    font-size: 3rem;
+}
+
+.btn-reset {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--veryDarkCyan);
+    background-color: var(--lightGrayishCyan);
 }
