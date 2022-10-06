@@ -1,11 +1,10 @@
 :root {
-    --blue: hsl(246, 80%, 60%);
-    --veryDarkBlue: hsl(226, 41%, 10%);
-    --darkBlue: rgb(28, 31, 74);
-    --darkBlueHover:rgba(43, 48, 114, 1);
-    --desaturatedBlue: hsl(235, 45%, 61%);
-    --paleBlue: hsl(236, 100%, 87%);
-
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan:hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
 }
 
 /*RESET*/
@@ -39,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 *::before,
 * {
     box-sizing: border-box;
+    font-family: 'Space Mono', sans-serif;
 }
 
 a {
@@ -81,9 +81,9 @@ html {
 
 body {
     line-height: 1;
-    font-family: 'Rubik', sans-serif;
-    background-color: var(--veryDarkBlue);
-    font-size: 1.8rem;
+    font-family: 'Space Mono', sans-serif;
+    background-color: none;
+    font-size: 2.4rem;
 }
 
 .container {
@@ -93,4 +93,8 @@ body {
     align-items: center;
     width: 90%;
     margin: 0 auto;
+}
+
+header .logo {
+    width: 10rem;
 }
