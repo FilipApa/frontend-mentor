@@ -122,14 +122,14 @@ header .logo {
 
 main {
     background-color: var(--white);
-    padding: 2.5rem;
+    padding: 2rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     height: calc(100vh - 10.6rem);
 }
 
 form {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .form-element {
@@ -249,7 +249,7 @@ form {
     background-color: var(--lightGrayishCyan);
 }
 
-@media screen and (min-width:540px) {
+@media screen and (min-width:400px) {
 
     main {
         width: 80%;
@@ -260,6 +260,58 @@ form {
     }
 
     .form-element:nth-child(2) {
-        margin: 2.5rem 0;
+        margin: 3rem 0;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    body {
+        height: 100vh;
+    }
+
+    header {
+        padding-bottom: 5rem;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        height: 65vh;
+        padding: 4rem;
+    }
+
+    form,
+    .tip-wrapper {
+        width: 46%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        margin-right: 8%;
+        margin-bottom: 0;
+    }
+
+    .form-btn-group button, .form-btn-group input {
+        width: 30%;
+        margin: 1.25%;
+    }
+
+    .tip-wrapper{
+        padding: 3.5rem;
+    }
+
+    .tip-result-wrapper {
+        margin-bottom: 4rem;
+    }
+
+    .tip-result {
+        font-size: 3.4rem;
+    }
+
+    .tip-wrapper button{
+        margin-top: auto;
     }
 }
