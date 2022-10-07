@@ -94,6 +94,10 @@ body {
     font-family: 'Space Mono', monospace;
     font-size: 2rem;
     background-color: var(--lightGrayishCyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -109,22 +113,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
+    padding: 2.5rem 0;
 }
 
 header .logo {
-    width: 10rem;
+    width: 9rem;
 }
 
 main {
     background-color: var(--white);
-    padding: 3.8rem;
+    padding: 2.5rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
+    height: calc(100vh - 10.6rem);
 }
 
 form {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .form-element {
@@ -133,13 +138,13 @@ form {
 }
 
 .form-element:nth-child(2) {
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .form-element input {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     text-align: end;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.6rem;
     border: 1px solid var(--veryLightGrayishCyan);
     border-radius: .5rem;
     color: var(--veryDarkCyan);
@@ -188,7 +193,7 @@ form {
 }
 
 .form-btn-group button {
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     border-radius: .5rem;
     display: flex;
     justify-content: center;
@@ -206,7 +211,7 @@ form {
 .tip-wrapper{
     background-color: var(--veryDarkCyan);
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .tip-result-wrapper {
@@ -226,11 +231,12 @@ form {
 .tip-result-title span{
     font-size: 1.4rem;
     color: var(--grayishCyan);
+    margin-top: 3px;
 }
 
 .tip-result {
     color: var(--lightGrayishCyan);
-    font-size: 3rem;
+    font-size: 2.4rem;
 }
 
 .btn-reset {
@@ -241,4 +247,19 @@ form {
     text-transform: uppercase;
     color: var(--veryDarkCyan);
     background-color: var(--lightGrayishCyan);
+}
+
+@media screen and (min-width:540px) {
+
+    main {
+        width: 80%;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    .form-element:nth-child(2) {
+        margin: 2.5rem 0;
+    }
 }
