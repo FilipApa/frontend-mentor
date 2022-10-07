@@ -300,9 +300,13 @@ form {
         margin-bottom: 0;
     }
 
-    .form-btn-group button, .form-btn-group input {
+    .form-btn-group button, .form-btn-group .form-input {
         width: 30%;
         margin: 1.25%;
+    }
+
+    .form-btn-group input {
+        width: 100%;
     }
 
     .tip-wrapper{
