@@ -209,6 +209,10 @@ form {
     color: var(--veryDarkCyan);
 }
 
+.form-btn-group input {
+    margin: 0;
+}
+
 .tip-wrapper{
     background-color: var(--veryDarkCyan);
     border-radius: 2rem;
@@ -282,8 +286,8 @@ form {
     main {
         display: flex;
         align-items: center;
-        width: 70%;
-        height: 65vh;
+        width: 92rem;
+        height: 47rem;
         padding: 3rem;
     }
 
@@ -327,11 +331,6 @@ form {
 }
 
 @media screen and (min-width:1400px) {
-    main {
-        width: 92rem;
-        height: 47rem;
-    }
-
     form,
     .tip-wrapper {
         width: 48%;
