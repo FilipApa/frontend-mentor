@@ -206,9 +206,14 @@ form {
 }
 
 .form-btn-group button,
-.form-btn-group input {
+.form-btn-group .form-input {
     width: 45%;
     margin: 0.5rem;
+}
+
+.form-btn-group .form-input input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .form-btn-group button {
@@ -228,7 +233,7 @@ form {
 }
 
 .form-btn-group input {
-    margin: 0;
+    width: 100%;
 }
 
 .tip-wrapper{
@@ -332,7 +337,7 @@ form {
     }
 
     .form-element input {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 
     .form-element label {
@@ -345,21 +350,24 @@ form {
     }
 
     .form-btn-group button {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         padding: 1.5rem 0;
     }
 
-
-    .form-btn-group input {
+    .form-btn-group .form-input input {
         width: 100%;
-    }
-
-    .tip-result {
-        font-size: 5.4rem;
     }
 
     .tip-wrapper{
         padding: 3.5rem;
+    }
+
+    .tip-wrapper button{
+        margin-top: auto;
+    }
+
+    .tip-result {
+        font-size: 5.4rem;
     }
 
     .tip-result-wrapper {
@@ -369,12 +377,4 @@ form {
     .tip-result {
         font-size: 3.4rem;
     }
-
-    .tip-wrapper button{
-        margin-top: auto;
-    }
-}
-
-@media screen and (min-width:1400px) {
-    
 }
