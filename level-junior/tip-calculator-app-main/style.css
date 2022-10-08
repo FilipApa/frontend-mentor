@@ -359,8 +359,8 @@ form {
     }
 
     .form-btn-group .form-input input {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
     }
 
     .tip-wrapper{
