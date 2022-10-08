@@ -212,8 +212,8 @@ form {
 }
 
 .form-btn-group .form-input input {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .form-btn-group button {
@@ -226,6 +226,10 @@ form {
     color: var(--white);
     transition: all .2s ease-in;
 }
+
+.form-btn-group button.active {
+    background-color: var(--strongCyan);
+} 
 
 .form-btn-group button:hover {
     background-color: var(--lightGrayishCyan);
@@ -355,7 +359,8 @@ form {
     }
 
     .form-btn-group .form-input input {
-        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     .tip-wrapper{
