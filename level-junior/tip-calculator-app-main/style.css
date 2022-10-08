@@ -318,8 +318,25 @@ form {
     }
 
     form {
-        margin-right: 8%;
-        margin-bottom: 0;
+        margin-right: 4%;
+        padding: 0 2rem;
+    }
+
+    .form-element:nth-child(2) {
+        margin: 4.2rem 0;
+    }
+
+    form,
+    .tip-wrapper {
+        width: 48%;
+    }
+
+    .form-element input {
+        font-size: 2.4rem;
+    }
+
+    .form-element label {
+        font-size: 1.6rem;
     }
 
     .form-btn-group button, .form-btn-group .form-input {
@@ -327,8 +344,18 @@ form {
         margin: 1.25%;
     }
 
+    .form-btn-group button {
+        font-size: 2.5rem;
+        padding: 1.5rem 0;
+    }
+
+
     .form-btn-group input {
         width: 100%;
+    }
+
+    .tip-result {
+        font-size: 5.4rem;
     }
 
     .tip-wrapper{
@@ -349,34 +376,5 @@ form {
 }
 
 @media screen and (min-width:1400px) {
-    form,
-    .tip-wrapper {
-        width: 48%;
-    }
-
-    form {
-        margin-right: 4%;
-        padding: 0 2rem;
-    }
-
-    .form-element:nth-child(2) {
-        margin: 4.2rem 0;
-    }
-
-    .form-element input {
-        font-size: 2.4rem;
-    }
-
-    .form-element label {
-        font-size: 1.6rem;
-    }
-
-    .form-btn-group button {
-        font-size: 2.5rem;
-        padding: 1.5rem 0;
-    }
-
-    .tip-result {
-        font-size: 5.4rem;
-    }
+    
 }
