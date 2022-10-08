@@ -182,6 +182,24 @@ form {
     width: 100%;
 }
 
+.form-input.error input {
+    border: 2px solid red;
+ }
+
+.form-input span {
+    right: 0;
+    top: -2.4rem;
+    width: max-content;
+    position: absolute;
+    font-size: 1.4rem;
+    color: red;
+    display: none;
+}
+
+.form-input.error span {
+   display: block;
+}
+
 .form-btn-group {
     display: flex;
     flex-wrap: wrap;
