@@ -2,16 +2,17 @@ function isEmpty(input) {
     return input === "" ? false : true;
 }
 
-function showSuccess( element, msg) {
+function showSuccess( element ) {
     const parent = element.parentElement;
-    const elementId = element.id;
-    const msgEl = document.querySelector(`${elementId} + span`);
+    const msgEl = parent.querySelector(`span`);
 
-   msgEl.innerText = msg;
-   parent.classList.add('success');
+    parent.classList.remove('error');
+    parent.classList.add('success');
+
+   msgEl.innerText = '';
 }
 
-function showError( element, msg) {
+function showError( element, msg ) {
     const parent = element.parentElement;
     const msgEl = parent.querySelector(`span`);
 
