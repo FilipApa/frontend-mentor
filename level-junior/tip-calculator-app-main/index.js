@@ -1,5 +1,9 @@
 function isEmpty(input) {
-    return input === "" ? false : true;
+    return input.value === "" ? false : true;
+}
+
+function checkNumberInput(input) {
+
 }
 
 function showSuccess( element ) {
@@ -19,5 +23,5 @@ function showError( element, msg ) {
     parent.classList.remove('success');
     parent.classList.add('error');
 
-   msgEl.innerText = msg;
+    msgEl.innerText = msg;
 }
