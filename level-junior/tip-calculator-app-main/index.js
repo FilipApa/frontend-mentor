@@ -2,8 +2,8 @@ function isEmpty(input) {
     return input.value === "" ? false : true;
 }
 
-function checkNumberInput(input) {
-
+function isNumber(input) {
+    return !isNaN(input.value) ? false : true;
 }
 
 function showSuccess( element ) {
