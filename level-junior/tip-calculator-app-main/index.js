@@ -6,6 +6,10 @@ function isNumber(input) {
     return !isNaN(input.value) ? false : true;
 }
 
+function isNumPositive(input) {
+    return input.value <= 0 ? false : true;
+}
+
 function showSuccess( element ) {
     const parent = element.parentElement;
     const msgEl = parent.querySelector(`span`);
