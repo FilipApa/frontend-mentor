@@ -3,6 +3,8 @@ const inputBill = document.getElementById('input-bill');
 const inputCustom = document.getElementById('input-custom');
 const inputNumOfPpl = document.getElementById('input-num-of-people');
 const btnsPrecent = document.getElementsByClassName('form-btn');
+const tipAmount = document.getElementById('tip-amount');
+const tipTotal = document.getElementById('tip-total');
 
 function isEmpty(input) {
     return input.value === "" ? true : false;
@@ -50,12 +52,15 @@ function checkFiled(input) {
 }
 
 function calcTip(bill, precent, people) {
-    const bill = bill.value;
-    const precent = precent / 100;
+    const billAmount = bill.value;
+    const precentVal = precent / 100;
     const numOfPpl = people.value;
 
-    const calcTip = bill * precent / numOfPpl;
-    const calcTotal = (bill + bill * precent) / numOfPpl;
+    const tip = billAmount * precentVal / numOfPpl;
+    const total = (billAmount + billAmount * precentVal) / numOfPpl;
+
+    tipAmount.innerText = tip.toFixed(2);
+    tipTotal.innerText = total.toFixed(2);
 }
 
 form.addEventListener('input', function (e) {
@@ -71,3 +76,16 @@ form.addEventListener('input', function (e) {
             break;
         }
     });
+
+[...btnsPrecent].forEach( btn => {
+    btn.addEventListener('click', () => {
+        let precentBtnAmount = btn.dataset.precent;
+        if(!inputBill.value) {
+            showError(inputBill, '');
+        } else if(!inputNumOfPpl.value) {
+            showError(inputNumOfPpl, "")
+        } else {
+            calcTip(inputBill, precentBtnAmount, inputNumOfPpl)
+        }    
+    })
+})
