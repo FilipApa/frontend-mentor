@@ -1,9 +1,14 @@
+const form = document.getElementById('form-tip');
+const inputBill = document.getElementById('input- bill');
+const inputCustom = document.getElementById('input-custom');
+const inputNumOfPpl = document.getElementById('input-num-of-people');
+
 function isEmpty(input) {
-    return input.value === "" ? false : true;
+    return input.value === "" ? true : false;
 }
 
 function isNumber(input) {
-    return !isNaN(input.value) ? false : true;
+    return isNaN(input.value) ? true : false;
 }
 
 function isNumPositive(input) {
@@ -28,6 +33,19 @@ function showError( element, msg ) {
     parent.classList.add('error');
 
     msgEl.innerText = msg;
+}
+
+function checkBill() {
+    if( isEmpty(inputBill) ) {
+        showError( inputBill, "Filed can't be empty" )
+    } else if( isNumber(inputBill) ) {
+        showError( inputBill, "Please eneter a number" )
+    } else if (!isNumPositive(inputBill)) {
+        showError( inputBill, "Please eneter a number larger than 0" )
+    } else {
+        showSuccess(inputBill)
+    }
+ 
 }
 
 form.addEventListener('input', function (e) {

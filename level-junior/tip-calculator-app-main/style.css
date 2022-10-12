@@ -186,6 +186,10 @@ form {
     border: 2px solid red;
  }
 
+ .form-input.success input {
+    border: 2px solid var(--strongCyan);
+ }
+
 .form-input span {
     right: 0;
     top: -2.4rem;
