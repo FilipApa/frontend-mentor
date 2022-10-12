@@ -2,6 +2,7 @@ const form = document.getElementById('form-tip');
 const inputBill = document.getElementById('input-bill');
 const inputCustom = document.getElementById('input-custom');
 const inputNumOfPpl = document.getElementById('input-num-of-people');
+const btnsPrecent = document.getElementsByClassName('form-btn');
 
 function isEmpty(input) {
     return input.value === "" ? true : false;
@@ -46,7 +47,15 @@ function checkFiled(input) {
     } else {
         showSuccess(input)
     }
- 
+}
+
+function calcTip(bill, precent, people) {
+    const bill = bill.value;
+    const precent = precent / 100;
+    const numOfPpl = people.value;
+
+    const calcTip = bill * precent / numOfPpl;
+    const calcTotal = (bill + bill * precent) / numOfPpl;
 }
 
 form.addEventListener('input', function (e) {
