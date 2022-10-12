@@ -52,12 +52,12 @@ function checkFiled(input) {
 }
 
 function calcTip(bill, precent, people) {
-    const billAmount = bill.value;
-    const precentVal = precent / 100;
-    const numOfPpl = people.value;
+    const billAmount = Number(bill.value);
+    const precentVal = Number(precent / 100);
+    const numOfPpl = Number(people.value);
 
     const tip = billAmount * precentVal / numOfPpl;
-    const total = (billAmount + billAmount * precentVal) / numOfPpl;
+    const total = (billAmount * precentVal + billAmount) / numOfPpl;
 
     tipAmount.innerText = tip.toFixed(2);
     tipTotal.innerText = total.toFixed(2);
