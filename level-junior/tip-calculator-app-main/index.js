@@ -29,3 +29,20 @@ function showError( element, msg ) {
 
     msgEl.innerText = msg;
 }
+
+form.addEventListener('input', function (e) {
+    switch (e.target.id) {
+        case 'username':
+            checkUsername();
+            break;
+        case 'email':
+            checkEmail();
+            break;
+        case 'password':
+            checkPassword();
+            break;
+        case 'confirm-password':
+            checkConfirmPassword();
+            break;
+    }
+});
