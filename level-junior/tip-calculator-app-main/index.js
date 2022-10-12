@@ -1,5 +1,5 @@
 const form = document.getElementById('form-tip');
-const inputBill = document.getElementById('input- bill');
+const inputBill = document.getElementById('input-bill');
 const inputCustom = document.getElementById('input-custom');
 const inputNumOfPpl = document.getElementById('input-num-of-people');
 
@@ -35,32 +35,30 @@ function showError( element, msg ) {
     msgEl.innerText = msg;
 }
 
-function checkBill() {
-    if( isEmpty(inputBill) ) {
-        showError( inputBill, "Filed can't be empty" )
-    } else if( isNumber(inputBill) ) {
-        showError( inputBill, "Please eneter a number" )
-    } else if (!isNumPositive(inputBill)) {
-        showError( inputBill, "Please eneter a number larger than 0" )
+function checkFiled(input) {
+
+    if( isEmpty(input) ) {
+        showError( input, "Filed can't be empty" )
+    } else if( isNumber(input) ) {
+        showError( input, "Please eneter a number" )
+    } else if (!isNumPositive(input)) {
+        showError( input, "Please eneter a number larger than 0" )
     } else {
-        showSuccess(inputBill)
+        showSuccess(input)
     }
  
 }
 
 form.addEventListener('input', function (e) {
     switch (e.target.id) {
-        case 'username':
-            checkUsername();
+        case 'input-bill':
+            checkFiled(inputBill);
             break;
-        case 'email':
-            checkEmail();
+        case 'input-custom':
+            checkFiled(inputCustom);
             break;
-        case 'password':
-            checkPassword();
+        case 'input-num-of-people':
+            checkFiled(inputNumOfPpl);
             break;
-        case 'confirm-password':
-            checkConfirmPassword();
-            break;
-    }
-});
+        }
+    });
