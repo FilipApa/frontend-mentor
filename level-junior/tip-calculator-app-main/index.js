@@ -1,5 +1,3 @@
-
-
 class TipCalculator {
     constructor() {
        this.form = document.getElementById('form-tip');
