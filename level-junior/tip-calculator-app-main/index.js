@@ -2,9 +2,10 @@ const form = document.getElementById('form-tip');
 const inputBill = document.getElementById('input-bill');
 const inputCustom = document.getElementById('input-custom');
 const inputNumOfPpl = document.getElementById('input-num-of-people');
-const btnsPrecent = document.getElementsByClassName('form-btn');
 const tipAmount = document.getElementById('tip-amount');
 const tipTotal = document.getElementById('tip-total');
+const btnsPrecent = document.getElementsByClassName('form-btn');
+const btnReset = document.getElementById('btn-reset');
 
 function isEmpty(input) {
     return input.value === "" ? true : false;
@@ -69,6 +70,14 @@ function calcTip(bill, precent, people) {
     tipTotal.innerText = `$${total.toFixed(2)}`;
 }
 
+function reset() {
+    clearActive([...btnsPrecent]);
+    inputBill.value = 0;
+    inputNumOfPpl.value = 0;
+    tipAmount.innerText = "0.00";
+    tipTotal.innerText = "0.00"
+}
+
 form.addEventListener('input', function (e) {
     switch (e.target.id) {
         case 'input-bill':
@@ -97,4 +106,8 @@ form.addEventListener('input', function (e) {
             calcTip(inputBill, precentBtnAmount, inputNumOfPpl)
         }    
     })
+})
+
+btnReset.addEventListener('click', () => {
+    reset();
 })
