@@ -1,121 +1,133 @@
-const form = document.getElementById('form-tip');
-const inputBill = document.getElementById('input-bill');
-const inputCustom = document.getElementById('input-custom');
-const inputNumOfPpl = document.getElementById('input-num-of-people');
-const tipAmount = document.getElementById('tip-amount');
-const tipTotal = document.getElementById('tip-total');
-const btnsPrecent = document.getElementsByClassName('form-btn');
-const btnReset = document.getElementById('btn-reset');
 
-function isEmpty(input) {
-    return input.value === "" ? true : false;
-}
 
-function isNumber(input) {
-    return isNaN(input.value) ? true : false;
-}
+class TipCalculator {
+    constructor() {
+       this.form = document.getElementById('form-tip');
+       this.inputBill = document.getElementById('input-bill');
+       this.inputCustom = document.getElementById('input-custom');
+       this.inputNumOfPpl = document.getElementById('input-num-of-people');
+       this.tipAmount = document.getElementById('tip-amount');
+       this.tipTotal = document.getElementById('tip-total');
+       this.btnsPrecent = document.getElementsByClassName('form-btn');
+       this.btnReset = document.getElementById('btn-reset');
 
-function isNumPositive(input) {
-    return input.value <= 0 ? false : true;
-}
+       this.events();
+    }
 
-function showSuccess( element ) {
-    const parent = element.parentElement;
-    const msgEl = parent.querySelector(`span`);
+    isEmpty(input) {
+        return input.value === "" ? true : false;
+    }
+    
+    isNumber(input) {
+        return isNaN(input.value) ? true : false;
+    }
+    
+    isNumPositive(input) {
+        return input.value <= 0 ? false : true;
+    }
+    
+    showSuccess( element ) {
+        const parent = element.parentElement;
+        const msgEl = parent.querySelector(`span`);
+    
+        parent.classList.remove('error');
+        parent.classList.add('success');
+    
+       msgEl.innerText = '';
+    }
+    
+    showError( element, msg ) {
+        const parent = element.parentElement;
+        const msgEl = parent.querySelector(`span`);
+    
+        parent.classList.remove('success');
+        parent.classList.add('error');
+    
+        msgEl.innerText = msg;
+    }
+    
+    checkFiled(input) {
+    
+        if( this.isEmpty(input) ) {
+            this.showError( input, "Filed can't be empty" )
+        } else if( this.isNumber(input) ) {
+            this.showError( input, "Please eneter a number" )
+        } else if (!this.isNumPositive(input)) {
+            this.showError( input, "Please eneter a number larger than 0" )
+        } else {
+            this.showSuccess(input)
+        }
+    }
+    
+    clearActive(arr) {
+        arr.forEach(item => {
+            item.classList.remove('active')
+        })
+    }
+    
+    calcTip(bill, precent, people) {
+        const billAmount = Number(bill.value);
+        const precentVal = Number(precent / 100);
+        const numOfPpl = Number(people.value);
+    
+        const tip = billAmount * precentVal / numOfPpl;
+        const total = (billAmount * precentVal + billAmount) / numOfPpl;
+    
+        this.tipAmount.innerText =`$${tip.toFixed(2)}` ;
+        this.tipTotal.innerText = `$${total.toFixed(2)}`;
+    }
+    
+    reset() {
+        this.clearActive([...this.btnsPrecent]);
+        this.inputBill.value = '';
+        this.inputNumOfPpl.value = '';
+        this.tipAmount.innerText = "0.00";
+        this.tipTotal.innerText = "0.00"
+    }
 
-    parent.classList.remove('error');
-    parent.classList.add('success');
-
-   msgEl.innerText = '';
-}
-
-function showError( element, msg ) {
-    const parent = element.parentElement;
-    const msgEl = parent.querySelector(`span`);
-
-    parent.classList.remove('success');
-    parent.classList.add('error');
-
-    msgEl.innerText = msg;
-}
-
-function checkFiled(input) {
-
-    if( isEmpty(input) ) {
-        showError( input, "Filed can't be empty" )
-    } else if( isNumber(input) ) {
-        showError( input, "Please eneter a number" )
-    } else if (!isNumPositive(input)) {
-        showError( input, "Please eneter a number larger than 0" )
-    } else {
-        showSuccess(input)
+    events() {
+        this.form.addEventListener('input', (e) => {
+            switch (e.target.id) {
+                case 'input-bill':
+                    this.checkFiled(this.inputBill);
+                    break;
+                case 'input-custom':
+                    this.clearActive([...this.btnsPrecent]);
+                    if(!this.inputBill.value) {
+                        this.showError(this.inputBill, '');
+                    } else if(!this.inputNumOfPpl.value) {
+                        this.showError(this.inputNumOfPpl, "")
+                    } else {
+                        this.checkFiled(this.inputCustom);
+                        this.calcTip(this.inputBill, this.inputCustom.value, this.inputNumOfPpl)
+                    } 
+                    break;
+                case 'input-num-of-people':
+                    this.checkFiled(this.inputNumOfPpl);
+                    break;
+                }
+            });
+        
+        [...this.btnsPrecent].forEach( btn => {
+            
+            btn.addEventListener('click', () => {
+                this.clearActive([...this.btnsPrecent]);
+                let precentBtnAmount = btn.dataset.precent;
+                if(!this.inputBill.value) {
+                    this.showError(this.inputBill, '');
+                } else if(!this.inputNumOfPpl.value) {
+                    this.showError(this.inputNumOfPpl, "")
+                } else {
+                    btn.classList.add('active')
+                    this.calcTip(this.inputBill, precentBtnAmount, this.inputNumOfPpl)
+                }    
+            })
+        })
+        
+        this.btnReset.addEventListener('click', () => {
+            this.reset()
+        })
     }
 }
 
-function clearActive(arr) {
-    arr.forEach(item => {
-        item.classList.remove('active')
-    })
-}
-
-function calcTip(bill, precent, people) {
-    const billAmount = Number(bill.value);
-    const precentVal = Number(precent / 100);
-    const numOfPpl = Number(people.value);
-
-    const tip = billAmount * precentVal / numOfPpl;
-    const total = (billAmount * precentVal + billAmount) / numOfPpl;
-
-    tipAmount.innerText =`$${tip.toFixed(2)}` ;
-    tipTotal.innerText = `$${total.toFixed(2)}`;
-}
-
-function reset() {
-    clearActive([...btnsPrecent]);
-    inputBill.value = 0;
-    inputNumOfPpl.value = 0;
-    tipAmount.innerText = "0.00";
-    tipTotal.innerText = "0.00"
-}
-
-form.addEventListener('input', function (e) {
-    switch (e.target.id) {
-        case 'input-bill':
-            checkFiled(inputBill);
-            break;
-        case 'input-custom':
-            clearActive([...btnsPrecent]);
-            if(!inputBill.value) {
-                showError(inputBill, '');
-            } else if(!inputNumOfPpl.value) {
-                showError(inputNumOfPpl, "")
-            } else {
-                checkFiled(inputCustom);
-                calcTip(inputBill, inputCustom.value, inputNumOfPpl)
-            } 
-            break;
-        case 'input-num-of-people':
-            checkFiled(inputNumOfPpl);
-            break;
-        }
-    });
-
-[...btnsPrecent].forEach( btn => {
-    
-    btn.addEventListener('click', function() {
-        clearActive([...btnsPrecent]);
-        let precentBtnAmount = btn.dataset.precent;
-        if(!inputBill.value) {
-            showError(inputBill, '');
-        } else if(!inputNumOfPpl.value) {
-            showError(inputNumOfPpl, "")
-        } else {
-            this.classList.add('active')
-            calcTip(inputBill, precentBtnAmount, inputNumOfPpl)
-        }    
-    })
-})
-
-btnReset.addEventListener('click', () => {
-    reset();
-})
+let tipCalc = new TipCalculator();
