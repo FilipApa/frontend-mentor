@@ -51,6 +51,12 @@ function checkFiled(input) {
     }
 }
 
+function clearActive(arr) {
+    arr.forEach(item => {
+        item.classList.remove('active')
+    })
+}
+
 function calcTip(bill, precent, people) {
     const billAmount = Number(bill.value);
     const precentVal = Number(precent / 100);
@@ -78,13 +84,16 @@ form.addEventListener('input', function (e) {
     });
 
 [...btnsPrecent].forEach( btn => {
-    btn.addEventListener('click', () => {
+    
+    btn.addEventListener('click', function() {
+        clearActive([...btnsPrecent]);
         let precentBtnAmount = btn.dataset.precent;
         if(!inputBill.value) {
             showError(inputBill, '');
         } else if(!inputNumOfPpl.value) {
             showError(inputNumOfPpl, "")
         } else {
+            this.classList.add('active')
             calcTip(inputBill, precentBtnAmount, inputNumOfPpl)
         }    
     })
