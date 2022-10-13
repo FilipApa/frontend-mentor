@@ -84,7 +84,15 @@ form.addEventListener('input', function (e) {
             checkFiled(inputBill);
             break;
         case 'input-custom':
-            checkFiled(inputCustom);
+            clearActive([...btnsPrecent]);
+            if(!inputBill.value) {
+                showError(inputBill, '');
+            } else if(!inputNumOfPpl.value) {
+                showError(inputNumOfPpl, "")
+            } else {
+                checkFiled(inputCustom);
+                calcTip(inputBill, inputCustom.value, inputNumOfPpl)
+            } 
             break;
         case 'input-num-of-people':
             checkFiled(inputNumOfPpl);

@@ -201,6 +201,11 @@ form {
     display: none;
 }
 
+.form-input--custom span {
+    top: unset;
+    bottom: -2rem;
+}
+
 .form-input.error span {
    display: block;
 }
