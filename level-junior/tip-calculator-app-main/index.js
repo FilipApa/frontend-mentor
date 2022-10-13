@@ -59,8 +59,8 @@ function calcTip(bill, precent, people) {
     const tip = billAmount * precentVal / numOfPpl;
     const total = (billAmount * precentVal + billAmount) / numOfPpl;
 
-    tipAmount.innerText = tip.toFixed(2);
-    tipTotal.innerText = total.toFixed(2);
+    tipAmount.innerText =`$${tip.toFixed(2)}` ;
+    tipTotal.innerText = `$${total.toFixed(2)}`;
 }
 
 form.addEventListener('input', function (e) {
