@@ -343,3 +343,8 @@ header .nav--round a{
     text-transform: uppercase;
     font-size: 1.2rem;
 }
+
+/*GALLERY*/
+.gallery img {
+    width: 50%;
+}
