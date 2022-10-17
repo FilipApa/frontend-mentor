@@ -43,11 +43,16 @@ footer, header, hgroup, menu, nav, section {
 *::before,
 * {
     box-sizing: border-box;
-    font-family: 'Space Mono', sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Fraunces', serif;
 }
 
 button{
@@ -86,9 +91,96 @@ html {
 
 body {
     line-height: 1;
+    font-family: 'Barlow', sans-serif;
 
 }
 
 .container {
     margin: 0 auto;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 2rem;
+}
+
+header .logo {
+    width: 10rem;
+}
+
+header nav {
+    position: absolute;
+    width: calc(100% - 4rem);
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    visibility: hidden;
+}
+
+header nav.show {
+    visibility: visible;
+}
+
+header ul {
+    width: 100%;
+    padding: 3.5rem 0 1.5rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul::before {
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid transparent; 
+    border-right:2rem solid var(--white); 
+    position: absolute;
+    top: -2rem;
+    right: 0;
+}
+
+header li {
+    margin-bottom: 2rem;
+    align-self: center;
+}
+
+header a {
+    color: var(--darkGrayishBlue);
+    font-size: 1.7rem;
+}
+
+header .nav--round {
+    background-color: var(--yellow);
+    border-radius: 3rem;
+    padding: 1.8rem;
+}
+
+header .nav--round a{
+    text-transform: uppercase;
+    color: var(--veryDarkDesaturatedBlue);
+    font-family: 'Fraunces', serif;
+}
+
+/*BANNER*/
+.banner {
+    height: 100vh;
+    background-image: url("./images/mobile/image-header.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.banner img{
+    width: 4rem;
 }
