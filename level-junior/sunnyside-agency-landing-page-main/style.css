@@ -89,6 +89,14 @@ html {
     font-size: 62.5%;
 }
 
+.flex {
+    display: flex;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
 body {
     line-height: 1;
     font-family: 'Barlow', sans-serif;
@@ -204,4 +212,78 @@ header .nav--round a{
 
 .banner img{
     width: 3rem;
+}
+
+/*SERVICES*/
+.services .flex {
+    flex-direction: column;
+}
+
+.services__text {
+    padding: 5.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__text h2,
+.services__background-text h3{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.services__text p,
+.services__background-text p{
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 2rem 0 2.5rem 0;
+    color: var(--grayishBlue);
+    line-height: 1.4;
+}
+
+.services a {
+    text-transform: uppercase;
+    color: var(--veryDarkDesaturatedBlue);
+    font-size: 1.6rem;
+}
+
+.services .yellow a {
+    border-bottom: 3px solid var(--yellow);
+}
+
+.services .pink a {
+    border-bottom: 3px solid var(--softred);
+}
+
+.services .green h3,
+.services .green p {
+    color: var(--darkDesaturatedCyanGraphicDesignText);
+}
+
+.services .blue h3,
+.services .blue p {
+    color: var(--darkBluePhotographyText);
+}
+
+.services__background-text {
+    position: relative;
+}
+
+.services__background-text:nth-child(2) {
+    top: -1px;
+}
+
+.services__background-text img{
+    object-fit: cover;
+    aspect-ratio: 9/16;
+}
+
+.services__background-text div {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 2.5rem;
 }
