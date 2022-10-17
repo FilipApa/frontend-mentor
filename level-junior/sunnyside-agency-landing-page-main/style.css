@@ -242,8 +242,9 @@ header .nav--round a{
     line-height: 1.4;
 }
 
-.services a {
+.services__text a {
     text-transform: uppercase;
+    font-family: 'Fraunces', serif;
     color: var(--veryDarkDesaturatedBlue);
     font-size: 1.6rem;
 }
@@ -286,4 +287,59 @@ header .nav--round a{
     transform: translateX(-50%);
     width: 100%;
     padding: 0 2.5rem;
+}
+
+/*TESTEMONIALS*/
+.testemonials {
+    padding: 3.5rem 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testemonials h2{
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--darkGrayishBlue);
+    margin-bottom: 3.5rem;
+    letter-spacing: 3px;
+}
+
+.testemonials-client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.testemonials-client .avatar{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+}
+
+.testemonials-client .avatar img{
+    border-radius: 50%;
+}
+
+.testemonials-client p {
+    margin: 2.5rem 0;
+    text-align: center;
+    color: var(--veryDarkGrayishBlue);
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+.testemonials-client h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+}
+
+.testemonials-client h4 {
+    font-family: 'Barlow', sans-serif;
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
