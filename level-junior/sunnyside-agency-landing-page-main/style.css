@@ -92,7 +92,6 @@ html {
 body {
     line-height: 1;
     font-family: 'Barlow', sans-serif;
-
 }
 
 .container {
@@ -108,11 +107,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:1rem 2rem;
+    padding: 3rem 2rem;
 }
 
 header .logo {
-    width: 10rem;
+    width: 14rem;
 }
 
 header nav {
@@ -175,12 +174,34 @@ header .nav--round a{
 
 /*BANNER*/
 .banner {
-    height: 100vh;
+    height: 80vh;
     background-image: url("./images/mobile/image-header.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .banner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -1rem;
+}
+
+.banner h1{
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 5px;
+    font-size: 4.8rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 .banner img{
-    width: 4rem;
+    width: 3rem;
 }
