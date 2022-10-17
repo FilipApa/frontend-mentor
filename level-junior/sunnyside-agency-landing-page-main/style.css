@@ -276,8 +276,7 @@ header .nav--round a{
 }
 
 .services__background-text img{
-    object-fit: cover;
-    aspect-ratio: 9/16;
+    object-fit: contain;
 }
 
 .services__background-text div {
