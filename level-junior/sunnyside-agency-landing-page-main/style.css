@@ -407,3 +407,7 @@ footer .social-media .insta:hover,
 footer .social-media .tw:hover {
     background: var(--white);
 }
+
+@media screen and (min-width:530px) {
+    
+}

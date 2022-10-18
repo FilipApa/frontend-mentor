@@ -44,13 +44,10 @@
     <section class="services">
       <div class="flex yellow">
         <div class="services__background">
-          <img
-            srcset="./images/mobile/image-transform.jpg 720w, ./images/desktop/image-transform.jpg 750w"
-            sizes="(max-width: 720px) 100vw,
-                  100vw"
-            src="./images/desktop/image-transform.jpg"
-            alt="Picture of an egg" 
-          />
+          <picture>
+            <source media="(min-width:720px)" srcset="./images/desktop/image-transform.jpg">
+            <img src="./images/mobile/image-transform.jpg" alt="Egg">
+          </picture>
         </div>
         <div class="services__text">
           <h2>Transform your brand</h2>
@@ -63,13 +60,10 @@
 
       <div class="flex flex-reverse pink">
         <div class="services__background">
-          <img
-            srcset="./images/mobile/image-stand-out.jpg 720w, ./images/desktop/image-stand-out.jpg 750w"
-            sizes="(max-width: 720px) 100vw,
-                  100vw"
-            src="./images/desktop/image-stand-out.jpg"
-            alt="Picture of a pink cup" 
-          />
+          <picture>
+            <source media="(min-width:720px)" srcset="./images/desktop/image-stand-out.jpg">
+            <img src="./images/mobile/image-stand-out.jpg" alt="Pink cup">
+          </picture>
         </div>
         
         <div class="services__text">
