@@ -1,9 +1,9 @@
 :root {
     --softred: hsl(7, 99%, 70%);
     --yellow: hsl(51, 100%, 49%);
-    --darkDesaturatedCyanGraphicDesignText: hsl(167, 40%, 24%);
+    --darkDesaturatedCyanGraphicDesignText: #25564b;
     --darkBluePhotographyText: hsl(198, 62%, 26%);
-    --darkModerateCyanFooter: hsl(168, 34%, 41%);
+    --darkModerateCyanFooter: #49baa0;
 
     --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
     --veryDarkGrayishBlue: hsl(213, 9%, 39%);
@@ -290,18 +290,18 @@ header .nav--round a{
 
 /*TESTEMONIALS*/
 .testemonials {
-    padding: 3.5rem 2.5rem;
+    padding: 4rem 2.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .testemonials h2{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
     text-transform: uppercase;
     color: var(--darkGrayishBlue);
-    margin-bottom: 3.5rem;
+    margin-bottom: 4rem;
     letter-spacing: 3px;
 }
 
@@ -346,4 +346,55 @@ header .nav--round a{
 /*GALLERY*/
 .gallery img {
     width: 50%;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--darkModerateCyanFooter);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5rem 0 6rem 0;
+}
+
+footer ul {
+    width: 100%;
+    justify-content: space-between;
+    margin: 3rem 0 5rem 0;
+}
+
+footer li {
+    margin: 0 1.3rem;
+}
+
+footer a{
+    font-size: 1.5rem;
+    color: var(--darkDesaturatedCyanGraphicDesignText);
+}
+
+footer .social-media span {
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+footer .social-media .fb {
+    background-image: url('./images/icon-facebook.svg');
+}
+
+footer .social-media .insta {
+    background-image: url('./images/icon-instagram.svg');
+}
+
+footer .social-media .tw {
+    background-image: url('./images/icon-twitter.svg');
+}
+
+footer .social-media .fb:hover,
+footer .social-media .insta:hover,
+footer .social-media .tw:hover {
+    filter:invert(99%) sepia(0%) saturate(7500%) hue-rotate(130deg) brightness(113%) contrast(92%);
 }
