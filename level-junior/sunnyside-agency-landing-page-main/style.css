@@ -370,6 +370,11 @@ footer li {
 footer a{
     font-size: 1.5rem;
     color: var(--darkDesaturatedCyanGraphicDesignText);
+    transition: color .2s ease-in;
+}
+
+footer li a:hover {
+    color: var(--white);
 }
 
 footer .social-media .fb {
@@ -393,12 +398,8 @@ footer .social-media span {
     height: 2rem;
     margin: 0 1rem;
     cursor: pointer;
-    transition: all .2s ease-in;
     background: var(--darkDesaturatedCyanGraphicDesignText);
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-size: 2rem;
-    -webkit-mask-size: 2rem;
+    transition: background .2s ease-in;
 }
 
 footer .social-media .fb:hover,
