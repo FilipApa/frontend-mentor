@@ -196,8 +196,6 @@ header .nav--round a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: -1rem;
 }
 
 .banner h1{
@@ -281,7 +279,7 @@ header .nav--round a{
 
 .services__background-text div {
     position: absolute;
-    bottom: 3rem;
+    top: 25rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -409,5 +407,44 @@ footer .social-media .tw:hover {
 }
 
 @media screen and (min-width:530px) {
+    /*BANNER*/
+    .banner {
+        height: 100vh;
+        background-image: url("./images/desktop/image-header.jpg");
+    }
+
+    .banner h1{
+        margin-bottom: 5.5rem;
+    }
+
+    /*SERVICES*/
+    .services .flex {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .services .flex-reverse {
+        flex-direction: row-reverse;
+
+    }
+
+    .services__text,
+    .services__background {
+        width: 50%;
+        height: 100%;
+    } 
+
+    .services__text {
+        padding: 0.5rem 1rem;
+    }
+
+    .services__text h2{
+        font-size: 2.5rem;
+    }
+
+    .services__text p, 
+    .services__text a{
+        font-size: 1.4rem;
+    }
     
 }
