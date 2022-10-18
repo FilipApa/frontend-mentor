@@ -372,29 +372,37 @@ footer a{
     color: var(--darkDesaturatedCyanGraphicDesignText);
 }
 
-footer .social-media span {
-    width: 3rem;
-    height: 3rem;
-    background-repeat: no-repeat;
-    margin: 0 1rem;
-    cursor: pointer;
-    transition: all .2s ease-in;
-}
-
 footer .social-media .fb {
-    background-image: url('./images/icon-facebook.svg');
+    mask: url('./images/icon-facebook.svg');
+    -webkit-mask: url('./images/icon-facebook.svg');
 }
 
 footer .social-media .insta {
-    background-image: url('./images/icon-instagram.svg');
+    mask: url('./images/icon-instagram.svg');
+    -webkit-mask: url('./images/icon-instagram.svg');
 }
 
 footer .social-media .tw {
-    background-image: url('./images/icon-twitter.svg');
+    mask: url('./images/icon-twitter.svg');
+    -webkit-mask: url('./images/icon-twitter.svg');
+}
+
+footer .social-media span {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in;
+    background: var(--darkDesaturatedCyanGraphicDesignText);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 2rem;
+    -webkit-mask-size: 2rem;
 }
 
 footer .social-media .fb:hover,
 footer .social-media .insta:hover,
 footer .social-media .tw:hover {
-    filter:invert(99%) sepia(0%) saturate(7500%) hue-rotate(130deg) brightness(113%) contrast(92%);
+    background: var(--white);
 }
