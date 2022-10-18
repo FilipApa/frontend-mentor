@@ -122,6 +122,10 @@ header .logo {
     width: 14rem;
 }
 
+header button {
+    display: block;
+}
+
 header nav {
     position: absolute;
     width: calc(100% - 4rem);
@@ -279,7 +283,7 @@ header .nav--round a{
 
 .services__background-text div {
     position: absolute;
-    top: 25rem;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -301,6 +305,13 @@ header .nav--round a{
     color: var(--darkGrayishBlue);
     margin-bottom: 4rem;
     letter-spacing: 3px;
+}
+
+.testemonials-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .testemonials-client {
@@ -342,6 +353,10 @@ header .nav--round a{
 }
 
 /*GALLERY*/
+.gallery {
+    flex-direction: column;
+}    
+
 .gallery img {
     width: 50%;
 }
@@ -390,6 +405,11 @@ footer .social-media .tw {
     -webkit-mask: url('./images/icon-twitter.svg');
 }
 
+footer .social-media .pinta {
+    mask: url('./images/icon-pinterest.svg');
+    -webkit-mask: url('./images/icon-pinterest.svg');
+}
+
 footer .social-media span {
     display: inline-block;
     width: 2rem;
@@ -406,7 +426,47 @@ footer .social-media .tw:hover {
     background: var(--white);
 }
 
-@media screen and (min-width:530px) {
+@media screen and (min-width:550px) {
+    /*HEADER*/
+    header {
+        width: 100%;
+    }
+    header button {
+        display: none;
+    }
+
+    header nav {
+        visibility: visible;
+        background-color: transparent;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: translateX(0);
+        width: fit-content;
+
+    }
+
+    header ul {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    header ul::before {
+        content: none;
+    }
+  
+    header li {
+        margin: 0 1.5rem;
+    }
+
+    header a {
+        transition: color .2s ease-out;
+    }
+
+    header a:hover {
+        color: var(--white);
+    }
+
     /*BANNER*/
     .banner {
         height: 100vh;
@@ -438,7 +498,8 @@ footer .social-media .tw:hover {
         padding: 0.5rem 1rem;
     }
 
-    .services__text h2{
+    .services__text h2,
+    .services__background-text h3{
         font-size: 2.5rem;
     }
 
@@ -446,5 +507,82 @@ footer .social-media .tw:hover {
     .services__text a{
         font-size: 1.4rem;
     }
-    
+
+    .services__background-text {
+        top: -1px;
+    }
+}
+@media screen and (min-width:760px) { 
+
+    /*SERVICES*/
+    .services__text {
+        align-items: flex-start;
+        padding: 1rem 3.5rem;
+    }
+
+    .services__text h2,
+    .services__background-text h3{
+        font-size: 3rem;
+    }
+
+    .services__text h2, 
+    .services__text p{
+        text-align: left; 
+    }
+
+    .services__text p, 
+    .services__text a,
+    .services__background-text p{
+        font-size: 1.8rem; 
+    }
+
+    /*TESTEMONIALS*/
+    .testemonials {
+        padding: 5.5rem 3rem;
+    }
+
+    .testemonials-wrapper {
+        flex-direction: row;
+    }
+
+    .testemonials-client {
+        max-width: 300px;
+        margin: 4rem 2rem;
+    }
+
+    /*GALLERY*/
+    .gallery {
+        flex-direction: row;
+    }
+
+    /*FOOTER*/
+
+    footer a{
+        font-size: 1.8rem;
+
+    }
+}
+
+@media screen and (min-width:1000px) { 
+
+    /*SERVICES*/
+    .services__text {
+        align-items: flex-start;
+        padding: 1rem 4.5rem;
+    }
+
+    .services__text h2,
+    .services__background-text h3{
+        font-size: 3.5rem;
+    }
+
+    .services__text p, 
+    .services__text a,
+    .services__background-text p{
+        font-size: 2rem; 
+    }
+
+    .services__background-text div {
+        top: 65%;
+    }
 }
