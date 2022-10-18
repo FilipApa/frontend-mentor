@@ -1,6 +1,6 @@
 :root {
     --softred: hsl(7, 99%, 70%);
-    --yellow: hsl(51, 100%, 49%);
+    --yellow: rgb(250, 212, 0);
     --darkDesaturatedCyanGraphicDesignText: #25564b;
     --darkBluePhotographyText: hsl(198, 62%, 26%);
     --darkModerateCyanFooter: #49baa0;
@@ -176,6 +176,7 @@ header .nav--round {
     background-color: var(--yellow);
     border-radius: 3rem;
     padding: 1.8rem;
+    cursor: pointer;
 }
 
 header .nav--round a{
@@ -443,7 +444,6 @@ footer .social-media .tw:hover {
         left: unset;
         transform: translateX(0);
         width: fit-content;
-
     }
 
     header ul {
@@ -459,12 +459,18 @@ footer .social-media .tw:hover {
         margin: 0 1.5rem;
     }
 
-    header a {
+    header a,
+    header .nav--round {
         transition: color .2s ease-out;
     }
 
-    header a:hover {
+    header a:hover,
+    header .nav--round:hover a {
         color: var(--white);
+    }
+
+    header .nav--round:hover {
+        background-color: rgb(145, 212, 245)
     }
 
     /*BANNER*/
