@@ -548,7 +548,7 @@ footer .social-media .tw:hover {
     }
 
     .testemonials h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .testemonials-wrapper {
@@ -563,6 +563,10 @@ footer .social-media .tw:hover {
     .testemonials-client .avatar{
         width: 8rem;
         height: 8rem;
+    }
+
+    .testemonials-client p {
+        margin: 5.5rem 0;
     }
 
     .testemonials-client h3 {
@@ -595,7 +599,7 @@ footer .social-media .tw:hover {
     /*SERVICES*/
     .services__text {
         align-items: flex-start;
-        padding: 1rem 4.5rem;
+        padding: 1rem 6rem;
     }
 
     .services__text h2,
