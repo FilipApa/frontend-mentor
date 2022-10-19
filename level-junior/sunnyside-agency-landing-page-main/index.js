@@ -1,0 +1,6 @@
+class MobileNav {
+    constructor() {
+
+    }
+}
+
