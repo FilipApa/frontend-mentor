@@ -209,7 +209,8 @@ header .nav--round a{
     text-transform: uppercase;
     line-height: 1.2;
     letter-spacing: 5px;
-    font-size: 4rem;
+    font-size: 4.2rem;
+    font-weight: 900;
     margin-bottom: 3rem;
     text-align: center;
 }
