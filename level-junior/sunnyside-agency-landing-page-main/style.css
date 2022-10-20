@@ -494,7 +494,8 @@ footer .social-media .tw:hover {
     }
 
     .services__text,
-    .services__background {
+    .services__background,
+    .services__background-text{
         width: 50%;
         height: 100%;
     } 
