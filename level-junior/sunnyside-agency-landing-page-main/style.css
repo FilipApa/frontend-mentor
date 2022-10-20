@@ -231,14 +231,14 @@ header .nav--round a{
 
 .services__text h2,
 .services__background-text h3{
-    font-size: 3rem;
+    font-size: 3.2rem;
     text-align: center;
     color: var(--veryDarkDesaturatedBlue);
 }
 
 .services__text p,
 .services__background-text p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-align: center;
     margin: 2rem 0 2.5rem 0;
     color: var(--grayishBlue);
@@ -249,7 +249,7 @@ header .nav--round a{
     text-transform: uppercase;
     font-family: 'Fraunces', serif;
     color: var(--veryDarkDesaturatedBlue);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .services .yellow a {
@@ -284,7 +284,7 @@ header .nav--round a{
 
 .services__background-text div {
     position: absolute;
-    top: 55%;
+    bottom: 4rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -491,7 +491,6 @@ footer .social-media .tw:hover {
 
     .services .flex-reverse {
         flex-direction: row-reverse;
-
     }
 
     .services__text,
@@ -517,6 +516,11 @@ footer .social-media .tw:hover {
     .services__background-text {
         top: -1px;
     }
+
+    .services__background-text div {
+        bottom: unset;
+        top: 50%;
+    }
 }
 @media screen and (min-width:760px) { 
 
@@ -541,6 +545,11 @@ footer .social-media .tw:hover {
     .services__background-text p{
         font-size: 1.8rem; 
     }
+
+    .services__background-text div {
+        top: 60%;
+    }
+    
 
     /*TESTEMONIALS*/
     .testemonials {
