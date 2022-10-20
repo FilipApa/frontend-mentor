@@ -527,8 +527,15 @@ footer .social-media .tw:hover {
 
     /*SERVICES*/
     .services__text {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services__text-wrap {
+        width: 69%;
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
-        padding: 1rem 3.5rem;
     }
 
     .services__text h2,
@@ -607,11 +614,6 @@ footer .social-media .tw:hover {
 @media screen and (min-width:1000px) { 
 
     /*SERVICES*/
-    .services__text {
-        align-items: flex-start;
-        padding: 1rem 6rem;
-    }
-
     .services__text h2,
     .services__background-text h3{
         font-size: 3.5rem;
