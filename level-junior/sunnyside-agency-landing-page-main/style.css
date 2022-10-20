@@ -4,6 +4,7 @@
     --darkDesaturatedCyanGraphicDesignText: #25564b;
     --darkBluePhotographyText: hsl(198, 62%, 26%);
     --darkModerateCyanFooter: #49baa0;
+    --backgroundPink: #FFFBF7;
 
     --veryDarkDesaturatedBlue: hsl(212, 27%, 19%);
     --veryDarkGrayishBlue: hsl(213, 9%, 39%);
@@ -298,6 +299,7 @@ header .nav--round a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--backgroundPink);
 }
 
 .testemonials h2{
