@@ -254,11 +254,11 @@ header .nav--round a{
 }
 
 .services .yellow a {
-    border-bottom: 3px solid var(--yellow);
+    border-bottom: 5px solid var(--yellow);
 }
 
 .services .pink a {
-    border-bottom: 3px solid var(--softred);
+    border-bottom: 5px solid var(--softred);
 }
 
 .services .green h3,
@@ -345,6 +345,8 @@ header .nav--round a{
 .testemonials-client h3 {
     font-size: 1.8rem;
     margin-bottom: 1.2rem;
+    font-weight: 900;
+    color: var(--veryDarkDesaturatedBlue);
 }
 
 .testemonials-client h4 {
@@ -562,11 +564,11 @@ footer .social-media .tw:hover {
 
     /*TESTEMONIALS*/
     .testemonials {
-        padding: 5.5rem 3rem;
+        padding: 12rem 0;
     }
 
     .testemonials h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .testemonials-wrapper {
@@ -579,8 +581,8 @@ footer .social-media .tw:hover {
     }
 
     .testemonials-client .avatar{
-        width: 8rem;
-        height: 8rem;
+        width: 7rem;
+        height: 7rem;
     }
 
     .testemonials-client p {
@@ -588,7 +590,7 @@ footer .social-media .tw:hover {
     }
 
     .testemonials-client h3 {
-        font-size: 1.8rem;
+        font-size: 1.8rem;    
     }
 
     .testemonials-client h4 {
