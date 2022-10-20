@@ -231,9 +231,10 @@ header .nav--round a{
 
 .services__text h2,
 .services__background-text h3{
-    font-size: 3.2rem;
+    font-size: 3rem;
     text-align: center;
     color: var(--veryDarkDesaturatedBlue);
+    font-weight: 900;
 }
 
 .services__text p,
