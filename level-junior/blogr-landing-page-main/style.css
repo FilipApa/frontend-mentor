@@ -1,6 +1,6 @@
 :root {
   /*(CTA text)*/  
---lightRred : #ff525d;
+--lightRed : #ff525d;
 /*(CTA hover background)*/
 --veryLightRed : #ff7a85;
 /*(headings)*/
@@ -16,8 +16,8 @@
 --veryDarkBlackBlue: #25252d;
 
 /*Background gradient - Intro/CTA mobile nav:*/
---veryLightRed: #ff8f70;
---lightRed: #ff3d54;
+--veryLightRedBg: #ff8f70;
+--lightRedBg: #ff3d54;
 
 /*Background gradient - body:*/
 --veryDarkGrayBlue: #2c2d3f;
@@ -108,3 +108,43 @@ body {
 .container {
     margin: 0 auto;
 }
+
+header {
+    height: 10vh;
+    width: 100%;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    background-color: transparent; 
+}
+
+header .logo {
+    width: 10rem;
+    margin-right: 1.5rem;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: var(--white);
+}
+
+.nav-dropdown img {
+    width: 1rem;
+}
+
+.nav-dropdown + ul {
+    background: var(--grayishBlue);
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--veryLightRedBg);
+}
+
