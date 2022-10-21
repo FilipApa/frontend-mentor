@@ -140,11 +140,20 @@ header .logo {
 }
 
 .banner {
-    height: 100vh;
+    height: 65vh;
+    border-bottom-left-radius: 10rem;
+    background: linear-gradient(140deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 100%);    
+}
+
+.banner-background{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--veryLightRedBg);
+    background-image: url("./images/bg-pattern-intro-mobile.svg");
+    background-size: cover;
+    background-position: center;
 }
 
