@@ -99,6 +99,7 @@ html {
 body {
     line-height: 1;
     font-family: 'Overpass', sans-serif;
+    font-size: 1.6rem;
 }
 
 .container {
@@ -138,7 +139,6 @@ body {
     background-color: var(--white);
     color: var(--lightRedBg);
 }
-
 
 header {
     height: 10vh;
@@ -273,3 +273,64 @@ header .logo {
     margin-bottom: 5rem;
  }
 
+.section-regular,
+.section-rounded,
+.section-wrapper article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.section-regular h2,
+.section-regular h3,
+.section-rounded h2{
+    color: var(--veryDarkBlue);
+    font-weight: 600;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.section-regular h2 {
+    font-size: 2.5rem;
+    margin: 3.5rem 0;
+}
+
+.section-regular h3 {
+    max-width: 20rem;
+    font-size: 2.2rem;
+    margin: 2rem auto;
+}
+
+.section-wrapper p {
+    max-width: 30rem;
+    color: var(--veryDarkGrayisBlue);
+    line-height: 1.4;
+    text-align: center;
+}
+
+.section-wrapper article {
+    margin-bottom: 4.5rem;
+}
+
+.section-rounded {
+    background-color:var(--veryDarkGrayBlue);
+    background-image: url('./images/bg-pattern-circles.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    height: 100vh;
+}
+
+.section-rounded .section-wrapper {
+    position: relative;
+    top: 0;
+}
+
+.section-rounded h2 {
+    font-size: 3.2rem;
+    line-height: 1.3;
+    color: var(--white);
+}
