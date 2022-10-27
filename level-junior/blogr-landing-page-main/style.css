@@ -239,9 +239,10 @@ header .logo {
 }
 
 .banner {
-    height: 75vh;
+    height: 85vh;
     border-bottom-left-radius: 10rem;
     background: linear-gradient(125deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 100%);    
+    padding: 0 2rem;
 }
 
 .banner-background {
@@ -273,20 +274,31 @@ header .logo {
     margin-bottom: 5rem;
  }
 
+ .banner .banner-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+ }
+
+ .banner .banner-buttons .btn-full{
+    margin-bottom: 1.2rem;
+ }
+
+ .banner + .section-regular {
+    margin-bottom: 14rem;
+}
+
 .section-regular,
-.section-rounded,
 .section-wrapper article{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 2rem 0;
-    padding: 2.5rem 0;
+    padding: 2.5rem 2rem;
 }
 
-.banner + .section-regular {
-    margin-bottom: 14rem;
-}
+
 
 .section-regular h2,
 .section-regular h3,
@@ -309,7 +321,7 @@ header .logo {
 }
 
 .section-wrapper p {
-    max-width: 30rem;
+    max-width: 35rem;
     color: var(--veryDarkGrayisBlue);
     line-height: 1.4;
     text-align: center;
@@ -327,16 +339,25 @@ header .logo {
     background-position: center -15vh;
     border-top-right-radius: 10rem;
     border-bottom-left-radius: 10rem;
-    height: 69vh;
+    position: relative;
 }
 
-.section-rounded .section-wrapper {
-    position: relative;
-    top: -20%;
+.section-rounded .section-img-wrapper {
+    position: absolute;
+    top: -15rem;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 25rem;
+}
+
+.section-rounded article {
+    padding-top: 15rem;
+    padding-bottom: 7.5rem;
 }
 
 .section-rounded h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
+    max-width: 28rem;
     line-height: 1.3;
     color: var(--white);
 }
@@ -383,3 +404,6 @@ footer .footer-list-heading a{
     font-weight: 600;
 }
 
+footer .footer-list-heading + ul li {
+    margin-bottom: .7rem;
+}
