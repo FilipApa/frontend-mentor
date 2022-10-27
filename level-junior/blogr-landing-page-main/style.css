@@ -108,9 +108,9 @@ body {
 
 .btn {
     border-radius: 3rem;
-    padding: 1.3rem 2.5rem;
-    font-size: 1.6rem;
-    margin: 0 1rem;
+    padding: 1.3rem 1.5rem;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
 }
 
 .btn-gradient {
@@ -259,14 +259,14 @@ header .logo {
 }
 
 .banner-background h1 {
-    width: 28rem;
+    max-width: 28rem;
     font-size: 3.2rem;
     line-height: 1.3;
     margin-bottom: 1.3rem;
  }
 
  .banner-background h2 {
-    width: 27rem;
+    max-width: 27rem;
     font-size: 1.8rem;
     font-weight: 300;
     line-height: 1.1;
@@ -281,6 +281,11 @@ header .logo {
     justify-content: center;
     align-items: center;
     margin: 2rem 0;
+    padding: 2.5rem 0;
+}
+
+.banner + .section-regular {
+    margin-bottom: 14rem;
 }
 
 .section-regular h2,
@@ -319,14 +324,15 @@ header .logo {
     background-image: url('./images/bg-pattern-circles.svg');
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center -15vh;
     border-top-right-radius: 10rem;
     border-bottom-left-radius: 10rem;
-    height: 100vh;
+    height: 69vh;
 }
 
 .section-rounded .section-wrapper {
     position: relative;
-    top: 0;
+    top: -20%;
 }
 
 .section-rounded h2 {
@@ -334,3 +340,46 @@ header .logo {
     line-height: 1.3;
     color: var(--white);
 }
+
+.section-rounded p {
+    color: var(--white);
+}
+
+footer {
+    background-color: var(--veryDarkBlackBlue);
+    padding: 4rem 0;
+    border-top-right-radius: 10rem;
+}
+
+footer .footer-nav,
+footer .footer-list,
+footer .footer-list ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .logo {
+    width: 7rem;
+}
+
+footer .logo,
+footer .footer-list ul {
+    margin-bottom: 2.5rem;
+}
+
+footer li a{
+    color: var(--grayishBlue);
+}
+
+footer .footer-list-heading{
+    margin-bottom: 1.5rem;
+}
+
+footer .footer-list-heading a{
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
