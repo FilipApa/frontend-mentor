@@ -7,7 +7,13 @@ module.exports = {
         path: path.resolve(__dirname, 'app')
     },
     mode: 'development',
-    watch: true,
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'app')
+        }, 
+        hot: true,
+        port: 3000
+    },
     module: {
         rules: [
             {
@@ -22,6 +28,7 @@ module.exports = {
                                 plugins: [
                                     require('postcss-simple-vars'),
                                     require('postcss-nested'),
+                                    require('postcss-mixins'),
                                     require('autoprefixer')
                                 ]
                             }
